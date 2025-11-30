@@ -1,0 +1,27 @@
+[0.669s] Invoking command in '/home/blueboat_sitl/gz_ws/build/blueboat_autonomy': PYTHONPATH=/home/blueboat_sitl/gz_ws/build/blueboat_autonomy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/blueboat_sitl/gz_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/build --no-deps symlink_data
+[0.836s] running develop
+[0.924s] running egg_info
+[0.924s] creating blueboat_autonomy.egg-info
+[0.924s] writing blueboat_autonomy.egg-info/PKG-INFO
+[0.924s] writing dependency_links to blueboat_autonomy.egg-info/dependency_links.txt
+[0.924s] writing entry points to blueboat_autonomy.egg-info/entry_points.txt
+[0.924s] writing requirements to blueboat_autonomy.egg-info/requires.txt
+[0.924s] writing top-level names to blueboat_autonomy.egg-info/top_level.txt
+[0.924s] writing manifest file 'blueboat_autonomy.egg-info/SOURCES.txt'
+[0.926s] reading manifest file 'blueboat_autonomy.egg-info/SOURCES.txt'
+[0.926s] writing manifest file 'blueboat_autonomy.egg-info/SOURCES.txt'
+[0.927s] running build_ext
+[0.928s] Creating /home/blueboat_sitl/gz_ws/install/lib/python3.10/site-packages/blueboat-autonomy.egg-link (link to .)
+[0.928s] Installing ardupilot_interface script to /home/blueboat_sitl/gz_ws/install/bin
+[0.928s] Installing autonomy_node script to /home/blueboat_sitl/gz_ws/install/bin
+[0.928s] 
+[0.928s] Installed /home/blueboat_sitl/gz_ws/build/blueboat_autonomy
+[0.928s] running symlink_data
+[0.928s] symbolically linking /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/resource/blueboat_autonomy -> /home/blueboat_sitl/gz_ws/install/share/ament_index/resource_index/packages
+[0.928s] symbolically linking /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/package.xml -> /home/blueboat_sitl/gz_ws/install/share/blueboat_autonomy
+[0.928s] creating /home/blueboat_sitl/gz_ws/install/share/blueboat_autonomy/launch
+[0.928s] symbolically linking /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/launch/autonomy.launch.py -> /home/blueboat_sitl/gz_ws/install/share/blueboat_autonomy/launch
+[0.929s] creating /home/blueboat_sitl/gz_ws/install/lib/blueboat_autonomy
+[0.929s] symbolically linking /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/blueboat_autonomy/main.py -> /home/blueboat_sitl/gz_ws/install/lib/blueboat_autonomy
+[0.929s] symbolically linking /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/blueboat_autonomy/interface/ardupilot_interface.py -> /home/blueboat_sitl/gz_ws/install/lib/blueboat_autonomy
+[0.952s] Invoked command in '/home/blueboat_sitl/gz_ws/build/blueboat_autonomy' returned '0': PYTHONPATH=/home/blueboat_sitl/gz_ws/build/blueboat_autonomy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/blueboat_sitl/gz_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/build --no-deps symlink_data

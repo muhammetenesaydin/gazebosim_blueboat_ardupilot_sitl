@@ -1,0 +1,1131 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="course_world">
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"></plugin>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+      <background_color>0.8 0.8 0.8</background_color>
+    </plugin>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"></plugin>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"></plugin>
+    <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu"></plugin>
+    <plugin filename="gz-sim-navsat-system" name="gz::sim::systems::NavSat"></plugin>
+
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>-22.986687</latitude_deg>
+      <longitude_deg>-43.202501</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+
+    <scene>
+      <ambient>1.0 1.0 1.0</ambient>
+      <background>0.8 0.8 0.8</background>
+      <sky></sky>
+    </scene>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.6 0.6 0.6 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <!-- The Ocean Waves -->
+    <include>
+      <pose>0 0 0 0 0 0</pose>
+      <uri>model://waves</uri>
+    </include>
+
+    <!-- BlueBoat -->
+    <include>
+      <pose>0 0 0 0 0 0</pose>
+      <uri>model://blueboat</uri>
+    </include>
+
+    <!-- Land Area -->
+    <model name="land">
+      <static>true</static>
+      <pose>0 -40 1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>200 50 2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>200 50 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.3 0.3 0.3 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Drone Flight Zone Marker -->
+    <model name="drone_zone">
+      <static>true</static>
+      <pose>0 -30 2.1 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>10 10 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    <model name="gn1">
+      <pose>10 0 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="gn2">
+      <pose>20 5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="gn3">
+      <pose>30 -5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="gn4">
+      <pose>40 5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_1_1">
+      <pose>10 8 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_1_2">
+      <pose>20 13 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_1_3">
+      <pose>30 3 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_1_4">
+      <pose>40 13 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_1_5">
+      <pose>10 -8 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_1_6">
+      <pose>20 -3 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_1_7">
+      <pose>30 -13 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_1_8">
+      <pose>40 -3 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_2_top_50">
+      <pose>50 5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_2_bot_50">
+      <pose>50 -5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_2_top_60">
+      <pose>60 5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_2_bot_60">
+      <pose>60 -5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_2_top_70">
+      <pose>70 5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_2_bot_70">
+      <pose>70 -5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_2_top_80">
+      <pose>80 5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_2_bot_80">
+      <pose>80 -5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_2_top_90">
+      <pose>90 5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="edge_2_bot_90">
+      <pose>90 -5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0.5 0 1</ambient>
+            <diffuse>1 0.5 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="obs_1">
+      <pose>60 0 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 1 0 1</ambient>
+            <diffuse>1 1 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="obs_2">
+      <pose>75 2 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="obs_3">
+      <pose>85 -2 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 1 0 1</ambient>
+            <diffuse>1 1 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="target_red">
+      <pose>110 5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="target_green">
+      <pose>110 0 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0 1 0 1</ambient>
+            <diffuse>0 1 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+    <model name="target_black">
+      <pose>110 -5 0 0 0 0</pose>
+      <plugin filename="gz-waves1-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics"></plugin>
+      <link name="base_link">
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+        <inertial>
+          <mass>6.545</mass>
+          <inertia>
+            <ixx>0.1636</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.1636</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.1636</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    
+  </world>
+</sdf>

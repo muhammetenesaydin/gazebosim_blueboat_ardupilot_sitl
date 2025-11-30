@@ -1,0 +1,19 @@
+[0.505s] Invoking command in '/home/blueboat_sitl/gz_ws/build/blueboat_autonomy': PYTHONPATH=/home/blueboat_sitl/gz_ws/build/blueboat_autonomy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/blueboat_sitl/gz_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/build --no-deps symlink_data
+[0.726s] running develop
+[0.853s] running egg_info
+[0.853s] creating blueboat_autonomy.egg-info
+[0.853s] writing blueboat_autonomy.egg-info/PKG-INFO
+[0.853s] writing dependency_links to blueboat_autonomy.egg-info/dependency_links.txt
+[0.853s] writing entry points to blueboat_autonomy.egg-info/entry_points.txt
+[0.853s] writing requirements to blueboat_autonomy.egg-info/requires.txt
+[0.853s] writing top-level names to blueboat_autonomy.egg-info/top_level.txt
+[0.854s] writing manifest file 'blueboat_autonomy.egg-info/SOURCES.txt'
+[0.855s] reading manifest file 'blueboat_autonomy.egg-info/SOURCES.txt'
+[0.856s] writing manifest file 'blueboat_autonomy.egg-info/SOURCES.txt'
+[0.857s] running build_ext
+[0.857s] Creating /home/blueboat_sitl/gz_ws/install/lib/python3.10/site-packages/blueboat-autonomy.egg-link (link to .)
+[0.858s] Installing autonomy_node script to /home/blueboat_sitl/gz_ws/install/bin
+[0.858s] 
+[0.858s] Installed /home/blueboat_sitl/gz_ws/build/blueboat_autonomy
+[0.858s] running symlink_data
+[0.888s] Invoked command in '/home/blueboat_sitl/gz_ws/build/blueboat_autonomy' returned '0': PYTHONPATH=/home/blueboat_sitl/gz_ws/build/blueboat_autonomy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/blueboat_sitl/gz_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/build --no-deps symlink_data

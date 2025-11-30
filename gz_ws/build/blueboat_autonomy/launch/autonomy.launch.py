@@ -1,0 +1,1 @@
+/home/blueboat_sitl/gz_ws/src/blueboat_autonomy/launch/autonomy.launch.py

@@ -1,0 +1,378 @@
+[0.011s] Invoking command in '/home/blueboat_sitl/gz_ws/build/gz-waves1': /usr/bin/cmake /home/blueboat_sitl/gz_ws/src/asv_wave_sim/gz-waves -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_TESTING=ON -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=/home/blueboat_sitl/gz_ws/install
+[0.089s] -- The C compiler identification is GNU 11.4.0
+[0.148s] -- The CXX compiler identification is GNU 11.4.0
+[0.155s] -- Detecting C compiler ABI info
+[0.202s] -- Detecting C compiler ABI info - done
+[0.207s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.207s] -- Detecting C compile features
+[0.208s] -- Detecting C compile features - done
+[0.210s] -- Detecting CXX compiler ABI info
+[0.263s] -- Detecting CXX compiler ABI info - done
+[0.268s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.268s] -- Detecting CXX compile features
+[0.269s] -- Detecting CXX compile features - done
+[0.281s] -- gz-waves1 version 1.0.0
+[0.281s] -- Operating system is Linux
+[0.285s] -- Found CPack generators: DEB
+[1.706s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: iostreams system filesystem 
+[1.711s] -- Looking for gz-math7 -- found version 7.5.1
+[1.711s] -- Searching for dependencies of gz-math7
+[1.715s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.715s] -- Searching for dependencies of gz-utils2
+[1.716s] -- Searching for <gz-math7> component [eigen3]
+[1.720s] -- Looking for gz-math7-eigen3 -- found version 7.5.1
+[1.720s] -- Searching for dependencies of gz-math7-eigen3
+[1.729s] -- Looking for gz-math7 - found
+[1.729s] 
+[1.733s] -- Looking for gz-common5 -- found version 5.7.1
+[1.734s] -- Searching for dependencies of gz-common5
+[1.734s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.734s] -- Looking for dlfcn.h - found
+[1.739s] -- Looking for libdl - found
+[1.740s] -- Found DL: TRUE  
+[1.745s] -- Checking for module 'uuid'
+[1.756s] --   Found uuid, version 2.37.2
+[1.774s] -- Found UUID: TRUE  
+[1.775s] -- Searching for <gz-common5> component [graphics]
+[1.779s] -- Looking for gz-common5-graphics -- found version 5.7.1
+[1.779s] -- Searching for dependencies of gz-common5-graphics
+[1.780s] -- Looking for gz-math7 -- found version 7.5.1
+[1.789s] -- Found GzAssimp: TRUE (found version "5.2.0") 
+[1.789s] -- Searching for <gz-common5> component [events]
+[1.793s] -- Looking for gz-common5-events -- found version 5.7.1
+[1.794s] -- Searching for dependencies of gz-common5-events
+[1.794s] -- Looking for gz-math7 -- found version 7.5.1
+[1.794s] -- Looking for gz-common5 - found
+[1.794s] 
+[1.798s] -- Looking for gz-plugin2 -- found version 2.0.4
+[1.799s] -- Searching for dependencies of gz-plugin2
+[1.799s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.799s] -- Searching for dependencies of gz-utils2
+[1.799s] -- Searching for <gz-utils2> component [cli]
+[1.803s] -- Looking for gz-utils2-cli -- found version 2.2.1
+[1.803s] -- Searching for dependencies of gz-utils2-cli
+[1.804s] -- Searching for <gz-plugin2> component [loader]
+[1.808s] -- Looking for gz-plugin2-loader -- found version 2.0.4
+[1.808s] -- Searching for dependencies of gz-plugin2-loader
+[1.809s] -- Searching for <gz-plugin2> component [register]
+[1.812s] -- Looking for gz-plugin2-register -- found version 2.0.4
+[1.813s] -- Searching for dependencies of gz-plugin2-register
+[1.813s] -- Looking for gz-plugin2 - found
+[1.813s] 
+[1.817s] -- Looking for gz-msgs9 -- found version 9.5.1
+[1.817s] -- Searching for dependencies of gz-msgs9
+[1.995s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[1.996s] -- Looking for gz-math7 -- found version 7.5.1
+[1.999s] -- Checking for module 'tinyxml2'
+[2.007s] --   Found tinyxml2, version 9.0.0
+[2.027s] -- Looking for gz-msgs9 - found
+[2.027s] 
+[2.031s] -- Looking for gz-transport12 -- found version 12.2.2
+[2.031s] -- Searching for dependencies of gz-transport12
+[2.062s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[2.065s] -- Checking for module 'libzmq >= 4'
+[2.074s] --   Found libzmq , version 4.3.4
+[2.097s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[2.102s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.102s] -- Looking for gz-msgs9 -- found version 9.5.1
+[2.103s] -- Looking for gz-transport12 - found
+[2.103s] 
+[2.108s] -- Looking for gz-rendering7 -- found version 7.5.0
+[2.108s] -- Searching for dependencies of gz-rendering7
+[2.108s] -- Looking for gz-math7 -- found version 7.5.1
+[2.109s] -- Looking for gz-common5 -- found version 5.7.1
+[2.109s] -- Searching for dependencies of gz-common5
+[2.109s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.109s] -- Looking for dlfcn.h - found
+[2.109s] -- Looking for libdl - found
+[2.114s] -- Searching for <gz-common5> component [graphics]
+[2.114s] -- Searching for <gz-common5> component [events]
+[2.115s] -- Searching for <gz-common5> component [geospatial]
+[2.119s] -- Looking for gz-common5-geospatial -- found version 5.7.1
+[2.120s] -- Searching for dependencies of gz-common5-geospatial
+[2.120s] -- Looking for gz-math7 -- found version 7.5.1
+[2.120s] -- Looking for gz-common5 -- found version 5.7.1
+[2.121s] -- Looking for gz-plugin2 -- found version 2.0.4
+[2.121s] -- Searching for dependencies of gz-plugin2
+[2.121s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.122s] -- Searching for <gz-plugin2> component [all]
+[2.126s] -- Looking for all libraries of gz-plugin2 -- found version 2.0.4
+[2.126s] -- Looking for gz-plugin2 -- found version 2.0.4
+[2.127s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.132s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL 
+[2.133s] -- Looking for gz-rendering7 - found
+[2.133s] 
+[2.139s] -- Looking for gz-sim7 -- found version 7.9.0
+[2.139s] -- Searching for dependencies of gz-sim7
+[2.143s] -- Looking for sdformat13 -- found version 13.9.0
+[2.143s] -- Searching for dependencies of sdformat13
+[2.147s] -- Looking for gz-math7 -- found version 7.5.1
+[2.148s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.148s] -- Looking for gz-plugin2 -- found version 2.0.4
+[2.149s] -- Looking for gz-transport12 -- found version 12.2.2
+[2.149s] -- Searching for dependencies of gz-transport12
+[2.179s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[2.182s] -- Checking for module 'libzmq >= 4'
+[2.191s] --   Found libzmq , version 4.3.4
+[2.216s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.216s] -- Looking for gz-msgs9 -- found version 9.5.1
+[2.216s] -- Searching for <gz-transport12> component [log]
+[2.221s] -- Looking for gz-transport12-log -- found version 12.2.2
+[2.221s] -- Searching for dependencies of gz-transport12-log
+[2.222s] -- Searching for <gz-transport12> component [parameters]
+[2.226s] -- Looking for gz-transport12-parameters -- found version 12.2.2
+[2.226s] -- Searching for dependencies of gz-transport12-parameters
+[2.227s] -- Looking for gz-msgs9 -- found version 9.5.1
+[2.227s] -- Looking for gz-common5 -- found version 5.7.1
+[2.228s] -- Searching for dependencies of gz-common5
+[2.228s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.228s] -- Looking for dlfcn.h - found
+[2.228s] -- Looking for libdl - found
+[2.233s] -- Searching for <gz-common5> component [profiler]
+[2.237s] -- Looking for gz-common5-profiler -- found version 5.7.1
+[2.238s] -- Searching for dependencies of gz-common5-profiler
+[2.238s] -- Searching for <gz-common5> component [events]
+[2.238s] -- Searching for <gz-common5> component [av]
+[2.242s] -- Looking for gz-common5-av -- found version 5.7.1
+[2.243s] -- Searching for dependencies of gz-common5-av
+[2.246s] -- Checking for module 'libswscale'
+[2.255s] --   Found libswscale, version 5.9.100
+[2.275s] -- Found SWSCALE: TRUE  
+[2.278s] -- Checking for module 'libavdevice >= 56.4.100'
+[2.287s] --   Found libavdevice , version 58.13.100
+[2.308s] -- Found AVDEVICE: TRUE (Required is at least version "56.4.100") 
+[2.312s] -- Checking for module 'libavformat'
+[2.319s] --   Found libavformat, version 58.76.100
+[2.340s] -- Found AVFORMAT: TRUE  
+[2.344s] -- Checking for module 'libavcodec'
+[2.352s] --   Found libavcodec, version 58.134.100
+[2.373s] -- Found AVCODEC: TRUE  
+[2.376s] -- Checking for module 'libavutil'
+[2.384s] --   Found libavutil, version 56.70.100
+[2.403s] -- Found AVUTIL: TRUE  
+[2.404s] -- Searching for <gz-common5> component [io]
+[2.408s] -- Looking for gz-common5-io -- found version 5.7.1
+[2.408s] -- Searching for dependencies of gz-common5-io
+[2.413s] -- Looking for gz-fuel_tools8 -- found version 8.2.0
+[2.413s] -- Searching for dependencies of gz-fuel_tools8
+[2.469s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+[2.478s] -- Checking for module 'jsoncpp'
+[2.486s] --   Found jsoncpp, version 1.9.5
+[2.509s] -- Found JSONCPP: TRUE  
+[2.515s] -- Checking for module 'libzip'
+[2.524s] --   Found libzip, version 1.7.3
+[2.546s] -- Found ZIP: TRUE  
+[2.546s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.546s] -- Looking for gz-common5 -- found version 5.7.1
+[2.547s] -- Searching for dependencies of gz-common5
+[2.547s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.547s] -- Looking for dlfcn.h - found
+[2.547s] -- Looking for libdl - found
+[2.552s] -- Searching for <gz-common5> component [testing]
+[2.556s] -- Looking for gz-common5-testing -- found version 5.7.1
+[2.556s] -- Searching for dependencies of gz-common5-testing
+[2.557s] -- Looking for gz-math7 -- found version 7.5.1
+[2.557s] -- Looking for gz-msgs9 -- found version 9.5.1
+[2.562s] -- Looking for gz-gui7 -- found version 7.2.2
+[2.562s] -- Searching for dependencies of gz-gui7
+[2.583s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.583s] -- Looking for gz-math7 -- found version 7.5.1
+[2.583s] -- Looking for gz-common5 -- found version 5.7.1
+[2.584s] -- Looking for gz-plugin2 -- found version 2.0.4
+[2.584s] -- Looking for gz-transport12 -- found version 12.2.2
+[2.584s] -- Looking for gz-rendering7 -- found version 7.5.0
+[2.584s] -- Looking for gz-msgs9 -- found version 9.5.1
+[2.614s] -- Looking for gz-physics6 -- found version 6.7.0
+[2.615s] -- Searching for dependencies of gz-physics6
+[2.615s] -- Looking for gz-common5 -- found version 5.7.1
+[2.615s] -- Looking for gz-math7 -- found version 7.5.1
+[2.615s] -- Looking for gz-plugin2 -- found version 2.0.4
+[2.615s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.616s] -- Searching for <gz-physics6> component [heightmap]
+[2.620s] -- Looking for gz-physics6-heightmap -- found version 6.7.0
+[2.620s] -- Searching for dependencies of gz-physics6-heightmap
+[2.621s] -- Looking for gz-common5 -- found version 5.7.1
+[2.621s] -- Searching for <gz-physics6> component [mesh]
+[2.625s] -- Looking for gz-physics6-mesh -- found version 6.7.0
+[2.625s] -- Searching for dependencies of gz-physics6-mesh
+[2.625s] -- Looking for gz-common5 -- found version 5.7.1
+[2.626s] -- Searching for <gz-physics6> component [sdf]
+[2.630s] -- Looking for gz-physics6-sdf -- found version 6.7.0
+[2.630s] -- Searching for dependencies of gz-physics6-sdf
+[2.630s] -- Looking for sdformat13 -- found version 13.9.0
+[2.635s] -- Looking for gz-sensors7 -- found version 7.3.1
+[2.635s] -- Searching for dependencies of gz-sensors7
+[2.652s] -- Looking for gz-math7 -- found version 7.5.1
+[2.652s] -- Looking for gz-common5 -- found version 5.7.1
+[2.653s] -- Looking for gz-transport12 -- found version 12.2.2
+[2.653s] -- Looking for gz-rendering7 -- found version 7.5.0
+[2.653s] -- Looking for gz-msgs9 -- found version 9.5.1
+[2.653s] -- Looking for sdformat13 -- found version 13.9.0
+[2.654s] -- Searching for <gz-sensors7> component [air_pressure]
+[2.658s] -- Looking for gz-sensors7-air_pressure -- found version 7.3.1
+[2.658s] -- Searching for dependencies of gz-sensors7-air_pressure
+[2.659s] -- Searching for <gz-sensors7> component [air_speed]
+[2.663s] -- Looking for gz-sensors7-air_speed -- found version 7.3.1
+[2.663s] -- Searching for dependencies of gz-sensors7-air_speed
+[2.663s] -- Searching for <gz-sensors7> component [altimeter]
+[2.667s] -- Looking for gz-sensors7-altimeter -- found version 7.3.1
+[2.668s] -- Searching for dependencies of gz-sensors7-altimeter
+[2.668s] -- Searching for <gz-sensors7> component [imu]
+[2.672s] -- Looking for gz-sensors7-imu -- found version 7.3.1
+[2.672s] -- Searching for dependencies of gz-sensors7-imu
+[2.672s] -- Searching for <gz-sensors7> component [force_torque]
+[2.676s] -- Looking for gz-sensors7-force_torque -- found version 7.3.1
+[2.676s] -- Searching for dependencies of gz-sensors7-force_torque
+[2.677s] -- Searching for <gz-sensors7> component [logical_camera]
+[2.681s] -- Looking for gz-sensors7-logical_camera -- found version 7.3.1
+[2.681s] -- Searching for dependencies of gz-sensors7-logical_camera
+[2.682s] -- Searching for <gz-sensors7> component [magnetometer]
+[2.685s] -- Looking for gz-sensors7-magnetometer -- found version 7.3.1
+[2.685s] -- Searching for dependencies of gz-sensors7-magnetometer
+[2.686s] -- Searching for <gz-sensors7> component [navsat]
+[2.690s] -- Looking for gz-sensors7-navsat -- found version 7.3.1
+[2.690s] -- Searching for dependencies of gz-sensors7-navsat
+[2.690s] -- Searching for <gz-sensors7> component [rendering]
+[2.694s] -- Looking for gz-sensors7-rendering -- found version 7.3.1
+[2.694s] -- Searching for dependencies of gz-sensors7-rendering
+[2.695s] -- Searching for <gz-sensors7> component [lidar]
+[2.699s] -- Looking for gz-sensors7-lidar -- found version 7.3.1
+[2.699s] -- Searching for dependencies of gz-sensors7-lidar
+[2.699s] -- Looking for gz-sensors7 -- found version 7.3.1
+[2.700s] -- Searching for <gz-sensors7> component [gpu_lidar]
+[2.704s] -- Looking for gz-sensors7-gpu_lidar -- found version 7.3.1
+[2.704s] -- Searching for dependencies of gz-sensors7-gpu_lidar
+[2.704s] -- Looking for gz-sensors7 -- found version 7.3.1
+[2.704s] -- Searching for <gz-sensors7> component [camera]
+[2.708s] -- Looking for gz-sensors7-camera -- found version 7.3.1
+[2.709s] -- Searching for dependencies of gz-sensors7-camera
+[2.709s] -- Looking for gz-sensors7 -- found version 7.3.1
+[2.709s] -- Searching for <gz-sensors7> component [boundingbox_camera]
+[2.713s] -- Looking for gz-sensors7-boundingbox_camera -- found version 7.3.1
+[2.713s] -- Searching for dependencies of gz-sensors7-boundingbox_camera
+[2.714s] -- Searching for <gz-sensors7> component [segmentation_camera]
+[2.718s] -- Looking for gz-sensors7-segmentation_camera -- found version 7.3.1
+[2.718s] -- Searching for dependencies of gz-sensors7-segmentation_camera
+[2.718s] -- Searching for <gz-sensors7> component [depth_camera]
+[2.722s] -- Looking for gz-sensors7-depth_camera -- found version 7.3.1
+[2.722s] -- Searching for dependencies of gz-sensors7-depth_camera
+[2.723s] -- Looking for gz-sensors7 -- found version 7.3.1
+[2.723s] -- Searching for <gz-sensors7> component [rgbd_camera]
+[2.727s] -- Looking for gz-sensors7-rgbd_camera -- found version 7.3.1
+[2.727s] -- Searching for dependencies of gz-sensors7-rgbd_camera
+[2.727s] -- Looking for gz-sensors7 -- found version 7.3.1
+[2.728s] -- Searching for <gz-sensors7> component [thermal_camera]
+[2.732s] -- Looking for gz-sensors7-thermal_camera -- found version 7.3.1
+[2.732s] -- Searching for dependencies of gz-sensors7-thermal_camera
+[2.732s] -- Looking for gz-sensors7 -- found version 7.3.1
+[2.733s] -- Searching for <gz-sensors7> component [wide_angle_camera]
+[2.737s] -- Looking for gz-sensors7-wide_angle_camera -- found version 7.3.1
+[2.737s] -- Searching for dependencies of gz-sensors7-wide_angle_camera
+[2.738s] -- Looking for gz-rendering7 -- found version 7.5.0
+[2.738s] -- Looking for gz-math7 -- found version 7.5.1
+[2.738s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.756s] -- Looking for gz-sim7 - found
+[2.756s] 
+[2.757s] -- Looking for sdformat13 -- found version 13.9.0
+[2.757s] -- Looking for sdformat13 - found
+[2.757s] 
+[2.757s] -- Compiling against Gazebo Garden
+[2.793s] -- Checking for module 'OGRE-RTShaderSystem >= 1.9'
+[2.801s] --   Found OGRE-RTShaderSystem , version 1.9.0
+[2.837s] -- Checking for module 'OGRE-Terrain >= 1.9'
+[2.851s] --   Found OGRE-Terrain , version 1.9.0
+[2.900s] -- Checking for module 'OGRE-Overlay >= 1.9'
+[2.917s] --   Found OGRE-Overlay , version 1.9.0
+[2.959s] -- Checking for module 'OGRE-Paging >= 1.9'
+[2.973s] --   Found OGRE-Paging , version 1.9.0
+[3.019s] -- Looking for GzOGRE - found
+[3.019s] 
+[3.030s] -- Looking for OGRE using the name: OGRE2
+[3.109s] --   + component HlmsPbs: found
+[3.112s] --   + component HlmsUnlit: found
+[3.115s] --   + component Overlay: found
+[3.117s] --   + component PlanarReflections: found
+[3.118s] -- Looking for GzOGRE2 - found
+[3.118s] 
+[3.123s] [33mCMake Warning at /usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALConfig.cmake:92 (message):
+[3.123s]   CGAL_DATA_DIR cannot be deduced, set the variable CGAL_DATA_DIR to set the
+[3.123s]   default value of CGAL::data_file_path()
+[3.123s] Call Stack (most recent call first):
+[3.123s]   CMakeLists.txt:168 (find_package)
+[3.123s] 
+[3.123s] [0m
+[3.125s] -- Using header-only CGAL
+[3.127s] -- Targetting Unix Makefiles
+[3.127s] -- Using /usr/bin/c++ compiler.
+[3.129s] -- Found GMP: /usr/lib/x86_64-linux-gnu/libgmp.so  
+[3.131s] -- Found MPFR: /usr/lib/x86_64-linux-gnu/libmpfr.so  
+[3.135s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.48")  
+[3.135s] -- Boost include dirs: /usr/include
+[3.135s] -- Boost libraries:    
+[3.136s] -- Using gcc version 4 or later. Adding -frounding-math
+[3.138s] -- Build type: RelWithDebInfo
+[3.138s] -- USING CXXFLAGS = ' -O2 -g -DNDEBUG'
+[3.138s] -- USING EXEFLAGS = ' '
+[3.138s] -- Requested component: Core
+[4.021s] -- 
+[4.022s] -- Searching for host SSE information
+[4.049s] -- SSE2 found
+[4.049s] -- SSE3 found
+[4.049s] -- SSE4.1 found
+[4.049s] -- SSE4.2 found
+[4.074s] -- Configuring library: gz-waves1-dynamic-geometry-system
+[4.076s] -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+[4.138s] -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+[4.139s] -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+[4.189s] -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+[4.189s] -- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+[4.253s] -- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+[4.257s] -- Configuring library: gz-waves1-hydrodynamics-system
+[4.260s] -- Configuring library: gz-waves1-rendering
+[4.262s] -- Configuring library: gz-waves1-rendering-ogre2
+[4.265s] -- Configuring library: gz-waves1-waves-visual-system
+[4.268s] -- Configuring library: gz-waves1-waves-model-system
+[4.270s] -- Configuring library: gz-waves1
+[4.273s] -- Adding 13 UNIT tests
+[4.423s] -- Adding 7 PERFORMANCE tests
+[4.480s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: iostreams 
+[4.536s] -- Adding codecheck target
+[4.536s] -- Build configuration successful
+[4.536s] -- Build type: RelWithDebInfo
+[4.536s] -- Install prefix: /home/blueboat_sitl/gz_ws/install
+[4.537s] -- Configuring done
+[4.626s] -- Generating done
+[4.650s] -- Build files have been written to: /home/blueboat_sitl/gz_ws/build/gz-waves1
+[4.666s] Invoked command in '/home/blueboat_sitl/gz_ws/build/gz-waves1' returned '0': /usr/bin/cmake /home/blueboat_sitl/gz_ws/src/asv_wave_sim/gz-waves -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_TESTING=ON -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=/home/blueboat_sitl/gz_ws/install
+[4.666s] Invoking command in '/home/blueboat_sitl/gz_ws/build/gz-waves1': /usr/bin/cmake --build /home/blueboat_sitl/gz_ws/build/gz-waves1 -- -j12 -l12
+[4.712s] [  2%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/Algorithm.cc.o[0m
+[4.712s] [  3%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/Geometry.cc.o[0m
+[4.712s] [  2%] [32mBuilding CXX object test/gtest_vendor/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[4.713s] [  3%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/MeshTools.cc.o[0m
+[4.713s] [  4%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/Convert.cc.o[0m
+[4.713s] [  6%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/OceanTile.cc.o[0m
+[4.713s] [  6%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/PhysicalConstants.cc.o[0m
+[4.713s] [  7%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/Grid.cc.o[0m
+[4.713s] [  8%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/Physics.cc.o[0m
+[4.713s] [  9%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/SubMeshWithTangents.cc.o[0m
+[4.713s] [ 10%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/TriangulatedGrid.cc.o[0m
+[4.713s] [ 11%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/Utilities.cc.o[0m
+[4.748s] [ 12%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/Wavefield.cc.o[0m
+[4.993s] [ 13%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/WavefieldSampler.cc.o[0m
+[6.171s] [ 15%] [32mBuilding CXX object src/CMakeFiles/gz-waves1.dir/WaveParameters.cc.o[0m
+[6.323s] gmake[2]: *** [src/CMakeFiles/gz-waves1.dir/build.make:216: src/CMakeFiles/gz-waves1.dir/Utilities.cc.o] Interrupt
+[6.324s] gmake[2]: *** [src/CMakeFiles/gz-waves1.dir/build.make:90: src/CMakeFiles/gz-waves1.dir/Convert.cc.o] Interrupt
+[6.324s] gmake[2]: *** [src/CMakeFiles/gz-waves1.dir/build.make:258: src/CMakeFiles/gz-waves1.dir/WaveParameters.cc.o] Interrupt
+[6.324s] gmake[2]: *** [src/CMakeFiles/gz-waves1.dir/build.make:244: src/CMakeFiles/gz-waves1.dir/WavefieldSampler.cc.o] Interrupt
+[6.324s] gmake[2]: *** [src/CMakeFiles/gz-waves1.dir/build.make:202: src/CMakeFiles/gz-waves1.dir/TriangulatedGrid.cc.o] Interrupt
+[6.324s] gmake[2]: *** [src/CMakeFiles/gz-waves1.dir/build.make:118: src/CMakeFiles/gz-waves1.dir/Grid.cc.o] Interrupt
+[6.324s] gmake[2]: *** [src/CMakeFiles/gz-waves1.dir/build.make:104: src/CMakeFiles/gz-waves1.dir/Geometry.cc.o] Interrupt
+[6.325s] gmake[2]: *** [src/CMakeFiles/gz-waves1.dir/build.make:174: src/CMakeFiles/gz-waves1.dir/Physics.cc.o] Interrupt
+[6.326s] gmake[2]: *** [src/CMakeFiles/gz-waves1.dir/build.make:132: src/CMakeFiles/gz-waves1.dir/MeshTools.cc.o] Interrupt
+[6.326s] gmake[2]: *** [src/CMakeFiles/gz-waves1.dir/build.make:146: src/CMakeFiles/gz-waves1.dir/OceanTile.cc.o] Interrupt
+[6.326s] gmake[2]: *** [test/gtest_vendor/CMakeFiles/gtest.dir/build.make:76: test/gtest_vendor/CMakeFiles/gtest.dir/src/gtest-all.cc.o] Interrupt
+[6.326s] gmake[1]: *** [CMakeFiles/Makefile2:1861: test/gtest_vendor/CMakeFiles/gtest.dir/all] Interrupt
+[6.328s] gmake[2]: *** [src/CMakeFiles/gz-waves1.dir/build.make:230: src/CMakeFiles/gz-waves1.dir/Wavefield.cc.o] Interrupt
+[6.328s] gmake[1]: *** [CMakeFiles/Makefile2:1287: src/CMakeFiles/gz-waves1.dir/all] Interrupt
+[6.328s] gmake: *** [Makefile:166: all] Interrupt
+[6.354s] Invoked command in '/home/blueboat_sitl/gz_ws/build/gz-waves1' returned '-2': /usr/bin/cmake --build /home/blueboat_sitl/gz_ws/build/gz-waves1 -- -j12 -l12

@@ -1,0 +1,489 @@
+[0.011s] Invoking command in '/home/blueboat_sitl/gz_ws/build/gz-waves1': /usr/bin/cmake /home/blueboat_sitl/gz_ws/src/asv_wave_sim/gz-waves -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_TESTING=ON -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=/home/blueboat_sitl/gz_ws/install
+[0.025s] -- gz-waves1 version 1.0.0
+[0.025s] -- Operating system is Linux
+[0.028s] -- Found CPack generators: DEB
+[0.238s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: iostreams system filesystem 
+[0.239s] -- Looking for gz-math7 -- found version 7.5.1
+[0.239s] -- Searching for dependencies of gz-math7
+[0.240s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.240s] -- Searching for dependencies of gz-utils2
+[0.241s] -- Searching for <gz-math7> component [eigen3]
+[0.242s] -- Looking for gz-math7-eigen3 -- found version 7.5.1
+[0.242s] -- Searching for dependencies of gz-math7-eigen3
+[0.243s] -- Looking for gz-math7 - found
+[0.243s] 
+[0.244s] -- Looking for gz-common5 -- found version 5.7.1
+[0.244s] -- Searching for dependencies of gz-common5
+[0.245s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.245s] -- Looking for dlfcn.h - found
+[0.245s] -- Looking for libdl - found
+[0.251s] -- Checking for module 'uuid'
+[0.261s] --   Found uuid, version 2.37.2
+[0.285s] -- Searching for <gz-common5> component [graphics]
+[0.285s] -- Looking for gz-common5-graphics -- found version 5.7.1
+[0.286s] -- Searching for dependencies of gz-common5-graphics
+[0.286s] -- Looking for gz-math7 -- found version 7.5.1
+[0.289s] -- Searching for <gz-common5> component [events]
+[0.290s] -- Looking for gz-common5-events -- found version 5.7.1
+[0.290s] -- Searching for dependencies of gz-common5-events
+[0.290s] -- Looking for gz-math7 -- found version 7.5.1
+[0.291s] -- Looking for gz-common5 - found
+[0.291s] 
+[0.292s] -- Looking for gz-plugin2 -- found version 2.0.4
+[0.292s] -- Searching for dependencies of gz-plugin2
+[0.293s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.293s] -- Searching for dependencies of gz-utils2
+[0.293s] -- Searching for <gz-utils2> component [cli]
+[0.294s] -- Looking for gz-utils2-cli -- found version 2.2.1
+[0.294s] -- Searching for dependencies of gz-utils2-cli
+[0.295s] -- Searching for <gz-plugin2> component [loader]
+[0.296s] -- Looking for gz-plugin2-loader -- found version 2.0.4
+[0.296s] -- Searching for dependencies of gz-plugin2-loader
+[0.296s] -- Searching for <gz-plugin2> component [register]
+[0.297s] -- Looking for gz-plugin2-register -- found version 2.0.4
+[0.297s] -- Searching for dependencies of gz-plugin2-register
+[0.298s] -- Looking for gz-plugin2 - found
+[0.298s] 
+[0.299s] -- Looking for gz-msgs9 -- found version 9.5.1
+[0.299s] -- Searching for dependencies of gz-msgs9
+[0.326s] -- Looking for gz-math7 -- found version 7.5.1
+[0.330s] -- Checking for module 'tinyxml2'
+[0.338s] --   Found tinyxml2, version 9.0.0
+[0.358s] -- Looking for gz-msgs9 - found
+[0.358s] 
+[0.358s] -- Looking for gz-transport12 -- found version 12.2.2
+[0.358s] -- Searching for dependencies of gz-transport12
+[0.391s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[0.394s] -- Checking for module 'libzmq >= 4'
+[0.403s] --   Found libzmq , version 4.3.4
+[0.429s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.429s] -- Looking for gz-msgs9 -- found version 9.5.1
+[0.429s] -- Looking for gz-transport12 - found
+[0.429s] 
+[0.430s] -- Looking for gz-rendering7 -- found version 7.5.0
+[0.430s] -- Searching for dependencies of gz-rendering7
+[0.430s] -- Looking for gz-math7 -- found version 7.5.1
+[0.431s] -- Looking for gz-common5 -- found version 5.7.1
+[0.431s] -- Searching for dependencies of gz-common5
+[0.431s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.431s] -- Looking for dlfcn.h - found
+[0.431s] -- Looking for libdl - found
+[0.436s] -- Searching for <gz-common5> component [graphics]
+[0.437s] -- Searching for <gz-common5> component [events]
+[0.437s] -- Searching for <gz-common5> component [geospatial]
+[0.437s] -- Looking for gz-common5-geospatial -- found version 5.7.1
+[0.437s] -- Searching for dependencies of gz-common5-geospatial
+[0.438s] -- Looking for gz-math7 -- found version 7.5.1
+[0.438s] -- Looking for gz-common5 -- found version 5.7.1
+[0.438s] -- Looking for gz-plugin2 -- found version 2.0.4
+[0.439s] -- Searching for dependencies of gz-plugin2
+[0.439s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.439s] -- Searching for <gz-plugin2> component [all]
+[0.439s] -- Looking for all libraries of gz-plugin2 -- found version 2.0.4
+[0.440s] -- Looking for gz-plugin2 -- found version 2.0.4
+[0.441s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.443s] -- Looking for gz-rendering7 - found
+[0.443s] 
+[0.443s] -- Looking for gz-sim7 -- found version 7.9.0
+[0.444s] -- Searching for dependencies of gz-sim7
+[0.444s] -- Looking for sdformat13 -- found version 13.9.0
+[0.444s] -- Searching for dependencies of sdformat13
+[0.448s] -- Looking for gz-math7 -- found version 7.5.1
+[0.449s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.449s] -- Looking for gz-plugin2 -- found version 2.0.4
+[0.450s] -- Looking for gz-transport12 -- found version 12.2.2
+[0.450s] -- Searching for dependencies of gz-transport12
+[0.482s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[0.485s] -- Checking for module 'libzmq >= 4'
+[0.494s] --   Found libzmq , version 4.3.4
+[0.520s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.521s] -- Looking for gz-msgs9 -- found version 9.5.1
+[0.521s] -- Searching for <gz-transport12> component [log]
+[0.521s] -- Looking for gz-transport12-log -- found version 12.2.2
+[0.521s] -- Searching for dependencies of gz-transport12-log
+[0.522s] -- Searching for <gz-transport12> component [parameters]
+[0.522s] -- Looking for gz-transport12-parameters -- found version 12.2.2
+[0.522s] -- Searching for dependencies of gz-transport12-parameters
+[0.523s] -- Looking for gz-msgs9 -- found version 9.5.1
+[0.523s] -- Looking for gz-common5 -- found version 5.7.1
+[0.523s] -- Searching for dependencies of gz-common5
+[0.523s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.523s] -- Looking for dlfcn.h - found
+[0.524s] -- Looking for libdl - found
+[0.528s] -- Searching for <gz-common5> component [profiler]
+[0.529s] -- Looking for gz-common5-profiler -- found version 5.7.1
+[0.529s] -- Searching for dependencies of gz-common5-profiler
+[0.529s] -- Searching for <gz-common5> component [events]
+[0.529s] -- Searching for <gz-common5> component [av]
+[0.530s] -- Looking for gz-common5-av -- found version 5.7.1
+[0.530s] -- Searching for dependencies of gz-common5-av
+[0.533s] -- Checking for module 'libswscale'
+[0.542s] --   Found libswscale, version 5.9.100
+[0.566s] -- Checking for module 'libavdevice >= 56.4.100'
+[0.574s] --   Found libavdevice , version 58.13.100
+[0.599s] -- Checking for module 'libavformat'
+[0.607s] --   Found libavformat, version 58.76.100
+[0.631s] -- Checking for module 'libavcodec'
+[0.640s] --   Found libavcodec, version 58.134.100
+[0.665s] -- Checking for module 'libavutil'
+[0.674s] --   Found libavutil, version 56.70.100
+[0.695s] -- Searching for <gz-common5> component [io]
+[0.695s] -- Looking for gz-common5-io -- found version 5.7.1
+[0.695s] -- Searching for dependencies of gz-common5-io
+[0.696s] -- Looking for gz-fuel_tools8 -- found version 8.2.0
+[0.697s] -- Searching for dependencies of gz-fuel_tools8
+[0.737s] -- Checking for module 'jsoncpp'
+[0.748s] --   Found jsoncpp, version 1.9.5
+[0.775s] -- Checking for module 'libzip'
+[0.784s] --   Found libzip, version 1.7.3
+[0.805s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.805s] -- Looking for gz-common5 -- found version 5.7.1
+[0.805s] -- Searching for dependencies of gz-common5
+[0.805s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.805s] -- Looking for dlfcn.h - found
+[0.805s] -- Looking for libdl - found
+[0.811s] -- Searching for <gz-common5> component [testing]
+[0.811s] -- Looking for gz-common5-testing -- found version 5.7.1
+[0.811s] -- Searching for dependencies of gz-common5-testing
+[0.812s] -- Looking for gz-math7 -- found version 7.5.1
+[0.812s] -- Looking for gz-msgs9 -- found version 9.5.1
+[0.813s] -- Looking for gz-gui7 -- found version 7.2.2
+[0.813s] -- Searching for dependencies of gz-gui7
+[0.837s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.837s] -- Looking for gz-math7 -- found version 7.5.1
+[0.837s] -- Looking for gz-common5 -- found version 5.7.1
+[0.837s] -- Looking for gz-plugin2 -- found version 2.0.4
+[0.837s] -- Looking for gz-transport12 -- found version 12.2.2
+[0.838s] -- Looking for gz-rendering7 -- found version 7.5.0
+[0.838s] -- Looking for gz-msgs9 -- found version 9.5.1
+[0.849s] -- Looking for gz-physics6 -- found version 6.7.0
+[0.849s] -- Searching for dependencies of gz-physics6
+[0.849s] -- Looking for gz-common5 -- found version 5.7.1
+[0.849s] -- Looking for gz-math7 -- found version 7.5.1
+[0.850s] -- Looking for gz-plugin2 -- found version 2.0.4
+[0.850s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.851s] -- Searching for <gz-physics6> component [heightmap]
+[0.851s] -- Looking for gz-physics6-heightmap -- found version 6.7.0
+[0.851s] -- Searching for dependencies of gz-physics6-heightmap
+[0.851s] -- Looking for gz-common5 -- found version 5.7.1
+[0.852s] -- Searching for <gz-physics6> component [mesh]
+[0.852s] -- Looking for gz-physics6-mesh -- found version 6.7.0
+[0.852s] -- Searching for dependencies of gz-physics6-mesh
+[0.852s] -- Looking for gz-common5 -- found version 5.7.1
+[0.853s] -- Searching for <gz-physics6> component [sdf]
+[0.853s] -- Looking for gz-physics6-sdf -- found version 6.7.0
+[0.853s] -- Searching for dependencies of gz-physics6-sdf
+[0.853s] -- Looking for sdformat13 -- found version 13.9.0
+[0.854s] -- Looking for gz-sensors7 -- found version 7.3.1
+[0.854s] -- Searching for dependencies of gz-sensors7
+[0.874s] -- Looking for gz-math7 -- found version 7.5.1
+[0.874s] -- Looking for gz-common5 -- found version 5.7.1
+[0.874s] -- Looking for gz-transport12 -- found version 12.2.2
+[0.874s] -- Looking for gz-rendering7 -- found version 7.5.0
+[0.875s] -- Looking for gz-msgs9 -- found version 9.5.1
+[0.875s] -- Looking for sdformat13 -- found version 13.9.0
+[0.875s] -- Searching for <gz-sensors7> component [air_pressure]
+[0.876s] -- Looking for gz-sensors7-air_pressure -- found version 7.3.1
+[0.876s] -- Searching for dependencies of gz-sensors7-air_pressure
+[0.876s] -- Searching for <gz-sensors7> component [air_speed]
+[0.877s] -- Looking for gz-sensors7-air_speed -- found version 7.3.1
+[0.877s] -- Searching for dependencies of gz-sensors7-air_speed
+[0.877s] -- Searching for <gz-sensors7> component [altimeter]
+[0.877s] -- Looking for gz-sensors7-altimeter -- found version 7.3.1
+[0.878s] -- Searching for dependencies of gz-sensors7-altimeter
+[0.878s] -- Searching for <gz-sensors7> component [imu]
+[0.878s] -- Looking for gz-sensors7-imu -- found version 7.3.1
+[0.878s] -- Searching for dependencies of gz-sensors7-imu
+[0.879s] -- Searching for <gz-sensors7> component [force_torque]
+[0.879s] -- Looking for gz-sensors7-force_torque -- found version 7.3.1
+[0.879s] -- Searching for dependencies of gz-sensors7-force_torque
+[0.880s] -- Searching for <gz-sensors7> component [logical_camera]
+[0.880s] -- Looking for gz-sensors7-logical_camera -- found version 7.3.1
+[0.880s] -- Searching for dependencies of gz-sensors7-logical_camera
+[0.880s] -- Searching for <gz-sensors7> component [magnetometer]
+[0.881s] -- Looking for gz-sensors7-magnetometer -- found version 7.3.1
+[0.881s] -- Searching for dependencies of gz-sensors7-magnetometer
+[0.881s] -- Searching for <gz-sensors7> component [navsat]
+[0.881s] -- Looking for gz-sensors7-navsat -- found version 7.3.1
+[0.882s] -- Searching for dependencies of gz-sensors7-navsat
+[0.882s] -- Searching for <gz-sensors7> component [rendering]
+[0.882s] -- Looking for gz-sensors7-rendering -- found version 7.3.1
+[0.882s] -- Searching for dependencies of gz-sensors7-rendering
+[0.883s] -- Searching for <gz-sensors7> component [lidar]
+[0.883s] -- Looking for gz-sensors7-lidar -- found version 7.3.1
+[0.883s] -- Searching for dependencies of gz-sensors7-lidar
+[0.884s] -- Looking for gz-sensors7 -- found version 7.3.1
+[0.884s] -- Searching for <gz-sensors7> component [gpu_lidar]
+[0.884s] -- Looking for gz-sensors7-gpu_lidar -- found version 7.3.1
+[0.884s] -- Searching for dependencies of gz-sensors7-gpu_lidar
+[0.885s] -- Looking for gz-sensors7 -- found version 7.3.1
+[0.885s] -- Searching for <gz-sensors7> component [camera]
+[0.885s] -- Looking for gz-sensors7-camera -- found version 7.3.1
+[0.886s] -- Searching for dependencies of gz-sensors7-camera
+[0.886s] -- Looking for gz-sensors7 -- found version 7.3.1
+[0.886s] -- Searching for <gz-sensors7> component [boundingbox_camera]
+[0.886s] -- Looking for gz-sensors7-boundingbox_camera -- found version 7.3.1
+[0.887s] -- Searching for dependencies of gz-sensors7-boundingbox_camera
+[0.887s] -- Searching for <gz-sensors7> component [segmentation_camera]
+[0.887s] -- Looking for gz-sensors7-segmentation_camera -- found version 7.3.1
+[0.888s] -- Searching for dependencies of gz-sensors7-segmentation_camera
+[0.888s] -- Searching for <gz-sensors7> component [depth_camera]
+[0.888s] -- Looking for gz-sensors7-depth_camera -- found version 7.3.1
+[0.888s] -- Searching for dependencies of gz-sensors7-depth_camera
+[0.889s] -- Looking for gz-sensors7 -- found version 7.3.1
+[0.889s] -- Searching for <gz-sensors7> component [rgbd_camera]
+[0.889s] -- Looking for gz-sensors7-rgbd_camera -- found version 7.3.1
+[0.890s] -- Searching for dependencies of gz-sensors7-rgbd_camera
+[0.890s] -- Looking for gz-sensors7 -- found version 7.3.1
+[0.890s] -- Searching for <gz-sensors7> component [thermal_camera]
+[0.890s] -- Looking for gz-sensors7-thermal_camera -- found version 7.3.1
+[0.891s] -- Searching for dependencies of gz-sensors7-thermal_camera
+[0.891s] -- Looking for gz-sensors7 -- found version 7.3.1
+[0.891s] -- Searching for <gz-sensors7> component [wide_angle_camera]
+[0.891s] -- Looking for gz-sensors7-wide_angle_camera -- found version 7.3.1
+[0.892s] -- Searching for dependencies of gz-sensors7-wide_angle_camera
+[0.892s] -- Looking for gz-rendering7 -- found version 7.5.0
+[0.893s] -- Looking for gz-math7 -- found version 7.5.1
+[0.893s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.912s] -- Looking for gz-sim7 - found
+[0.912s] 
+[0.913s] -- Looking for sdformat13 -- found version 13.9.0
+[0.913s] -- Looking for sdformat13 - found
+[0.913s] 
+[0.913s] -- Compiling against Gazebo Garden
+[0.958s] -- Checking for module 'OGRE-RTShaderSystem >= 1.9'
+[0.966s] --   Found OGRE-RTShaderSystem , version 1.9.0
+[0.990s] -- Checking for module 'OGRE-Terrain >= 1.9'
+[0.999s] --   Found OGRE-Terrain , version 1.9.0
+[1.023s] -- Checking for module 'OGRE-Overlay >= 1.9'
+[1.032s] --   Found OGRE-Overlay , version 1.9.0
+[1.056s] -- Checking for module 'OGRE-Paging >= 1.9'
+[1.065s] --   Found OGRE-Paging , version 1.9.0
+[1.088s] -- Looking for GzOGRE - found
+[1.089s] 
+[1.092s] -- Looking for OGRE using the name: OGRE2
+[1.127s] --   + component HlmsPbs: found
+[1.127s] --   + component HlmsUnlit: found
+[1.127s] --   + component Overlay: found
+[1.127s] --   + component PlanarReflections: found
+[1.128s] -- Looking for GzOGRE2 - found
+[1.128s] 
+[1.129s] [33mCMake Warning at /usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALConfig.cmake:92 (message):
+[1.129s]   CGAL_DATA_DIR cannot be deduced, set the variable CGAL_DATA_DIR to set the
+[1.129s]   default value of CGAL::data_file_path()
+[1.129s] Call Stack (most recent call first):
+[1.129s]   CMakeLists.txt:168 (find_package)
+[1.129s] 
+[1.129s] [0m
+[1.131s] -- Using header-only CGAL
+[1.132s] -- Targetting Unix Makefiles
+[1.132s] -- Using /usr/bin/c++ compiler.
+[1.136s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.48")  
+[1.137s] -- Boost include dirs: /usr/include
+[1.137s] -- Boost libraries:    
+[1.137s] -- Using gcc version 4 or later. Adding -frounding-math
+[1.139s] -- Build type: RelWithDebInfo
+[1.139s] -- USING CXXFLAGS = ' -O2 -g -DNDEBUG'
+[1.139s] -- USING EXEFLAGS = ' '
+[1.139s] -- Requested component: Core
+[1.143s] -- 
+[1.143s] -- Searching for host SSE information
+[1.165s] -- SSE2 found
+[1.165s] -- SSE3 found
+[1.165s] -- SSE4.1 found
+[1.165s] -- SSE4.2 found
+[1.181s] -- Configuring library: gz-waves1-dynamic-geometry-system
+[1.184s] -- Configuring library: gz-waves1-hydrodynamics-system
+[1.187s] -- Configuring library: gz-waves1-rendering
+[1.190s] -- Configuring library: gz-waves1-rendering-ogre2
+[1.192s] -- Configuring library: gz-waves1-waves-visual-system
+[1.194s] -- Configuring library: gz-waves1-waves-model-system
+[1.197s] -- Configuring library: gz-waves1
+[1.199s] -- Adding 13 UNIT tests
+[1.272s] -- Adding 7 PERFORMANCE tests
+[1.333s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: iostreams 
+[1.388s] -- Adding codecheck target
+[1.388s] -- Build configuration successful
+[1.388s] -- Build type: RelWithDebInfo
+[1.388s] -- Install prefix: /home/blueboat_sitl/gz_ws/install
+[1.389s] -- Configuring done
+[1.485s] -- Generating done
+[1.512s] -- Build files have been written to: /home/blueboat_sitl/gz_ws/build/gz-waves1
+[1.527s] Invoked command in '/home/blueboat_sitl/gz_ws/build/gz-waves1' returned '0': /usr/bin/cmake /home/blueboat_sitl/gz_ws/src/asv_wave_sim/gz-waves -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_TESTING=ON -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=/home/blueboat_sitl/gz_ws/install
+[1.528s] Invoking command in '/home/blueboat_sitl/gz_ws/build/gz-waves1': /usr/bin/cmake --build /home/blueboat_sitl/gz_ws/build/gz-waves1 -- -j12 -l12
+[1.558s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[1.567s] [  2%] Built target gtest
+[1.575s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[1.578s] [35m[1mConsolidate compiler generated dependencies of target gz-waves1[0m
+[1.584s] [  4%] Built target gtest_main
+[1.652s] [ 26%] Built target gz-waves1
+[1.665s] [35m[1mConsolidate compiler generated dependencies of target UNIT_Algorithm_TEST[0m
+[1.665s] [35m[1mConsolidate compiler generated dependencies of target UNIT_WaveSpectrum_TEST[0m
+[1.666s] [35m[1mConsolidate compiler generated dependencies of target UNIT_Physics_TEST[0m
+[1.667s] [35m[1mConsolidate compiler generated dependencies of target UNIT_Grid_TEST[0m
+[1.667s] [35m[1mConsolidate compiler generated dependencies of target UNIT_LinearRandomFFTWaveSimulation_TEST[0m
+[1.667s] [35m[1mConsolidate compiler generated dependencies of target UNIT_Geometry_TEST[0m
+[1.667s] [35m[1mConsolidate compiler generated dependencies of target UNIT_TriangulatedGrid_TEST[0m
+[1.667s] [35m[1mConsolidate compiler generated dependencies of target UNIT_MeshTools_TEST[0m
+[1.667s] [35m[1mConsolidate compiler generated dependencies of target UNIT_LinearRegularWaveSimulation_TEST[0m
+[1.667s] [35m[1mConsolidate compiler generated dependencies of target UNIT_EigenFFTW_TEST[0m
+[1.668s] [35m[1mConsolidate compiler generated dependencies of target UNIT_Wavefield_TEST[0m
+[1.676s] [35m[1mConsolidate compiler generated dependencies of target UNIT_CGAL_TEST[0m
+[1.680s] [ 29%] Built target UNIT_WaveSpectrum_TEST
+[1.683s] [ 30%] Built target UNIT_Algorithm_TEST
+[1.684s] [ 32%] Built target UNIT_LinearRandomFFTWaveSimulation_TEST
+[1.691s] [ 34%] Built target UNIT_EigenFFTW_TEST
+[1.694s] [35m[1mConsolidate compiler generated dependencies of target gz-waves1-dynamic-geometry-system[0m
+[1.699s] [35m[1mConsolidate compiler generated dependencies of target gz-waves1-hydrodynamics-system[0m
+[1.699s] [35m[1mConsolidate compiler generated dependencies of target UNIT_WaveSpreadingFunction_TEST[0m
+[1.704s] [ 36%] Built target UNIT_Geometry_TEST
+[1.704s] [ 39%] Built target UNIT_TriangulatedGrid_TEST
+[1.704s] [ 40%] Built target UNIT_Grid_TEST
+[1.708s] [ 41%] Built target UNIT_LinearRegularWaveSimulation_TEST
+[1.709s] [ 46%] Built target UNIT_MeshTools_TEST
+[1.709s] [ 46%] Built target UNIT_Wavefield_TEST
+[1.709s] [ 48%] Built target UNIT_Physics_TEST
+[1.722s] [35m[1mConsolidate compiler generated dependencies of target gz-waves1-rendering[0m
+[1.722s] [ 49%] Built target UNIT_WaveSpreadingFunction_TEST
+[1.722s] [ 51%] Built target UNIT_CGAL_TEST
+[1.722s] [35m[1mConsolidate compiler generated dependencies of target PERFORMANCE_EigenReturnByValue[0m
+[1.723s] [35m[1mConsolidate compiler generated dependencies of target PERFORMANCE_LinearRandomFFTWaveSimBaseAmplitudes[0m
+[1.723s] [35m[1mConsolidate compiler generated dependencies of target PERFORMANCE_LinearRandomFFTWaveSimCurrentAmplitudes[0m
+[1.723s] [35m[1mConsolidate compiler generated dependencies of target PERFORMANCE_LinearRandomFFTWaveSimElevationAt[0m
+[1.723s] [35m[1mConsolidate compiler generated dependencies of target PERFORMANCE_LinearRandomFFTWaveSimDisplacements[0m
+[1.723s] [35m[1mConsolidate compiler generated dependencies of target gz-waves1-waves-model-system[0m
+[1.723s] [35m[1mConsolidate compiler generated dependencies of target PERFORMANCE_LinearRegularWaveSimDisplacements[0m
+[1.723s] [ 53%] Built target gz-waves1-dynamic-geometry-system
+[1.733s] [35m[1mConsolidate compiler generated dependencies of target PLOT_GnuPlotExample[0m
+[1.733s] [35m[1mConsolidate compiler generated dependencies of target PERFORMANCE_WaveSpectrumECKV[0m
+[1.733s] [ 55%] Built target PERFORMANCE_EigenReturnByValue
+[1.737s] [35m[1mConsolidate compiler generated dependencies of target PLOT_LinearRandomFFTWaves[0m
+[1.739s] [ 56%] Built target PERFORMANCE_LinearRandomFFTWaveSimBaseAmplitudes
+[1.739s] [ 59%] Built target PERFORMANCE_LinearRandomFFTWaveSimCurrentAmplitudes
+[1.740s] [ 61%] Built target PERFORMANCE_LinearRandomFFTWaveSimElevationAt
+[1.740s] [ 63%] Built target PERFORMANCE_LinearRandomFFTWaveSimDisplacements
+[1.741s] [ 65%] Built target gz-waves1-hydrodynamics-system
+[1.741s] [ 67%] Built target PERFORMANCE_LinearRegularWaveSimDisplacements
+[1.747s] [ 70%] Built target gz-waves1-waves-model-system
+[1.747s] [ 72%] Built target PERFORMANCE_WaveSpectrumECKV
+[1.748s] [35m[1mConsolidate compiler generated dependencies of target PLOT_LinearRandomWaves[0m
+[1.750s] [ 73%] Built target PLOT_GnuPlotExample
+[1.750s] [35m[1mConsolidate compiler generated dependencies of target PLOT_LinearRegularWaves[0m
+[1.750s] [35m[1mConsolidate compiler generated dependencies of target PLOT_WaveSpectrum[0m
+[1.754s] [ 75%] Built target PLOT_LinearRandomFFTWaves
+[1.763s] [ 77%] Built target PLOT_LinearRandomWaves
+[1.765s] [ 81%] Built target PLOT_WaveSpectrum
+[1.765s] [ 81%] Built target PLOT_LinearRegularWaves
+[1.770s] [ 91%] Built target gz-waves1-rendering
+[1.780s] [35m[1mConsolidate compiler generated dependencies of target gz-waves1-waves-visual-system[0m
+[1.785s] [35m[1mConsolidate compiler generated dependencies of target gz-waves1-rendering-ogre2[0m
+[1.804s] [ 93%] Built target gz-waves1-waves-visual-system
+[1.824s] [100%] Built target gz-waves1-rendering-ogre2
+[1.833s] Invoked command in '/home/blueboat_sitl/gz_ws/build/gz-waves1' returned '0': /usr/bin/cmake --build /home/blueboat_sitl/gz_ws/build/gz-waves1 -- -j12 -l12
+[1.840s] Invoking command in '/home/blueboat_sitl/gz_ws/build/gz-waves1': /usr/bin/cmake --install /home/blueboat_sitl/gz_ws/build/gz-waves1
+[1.845s] -- Install configuration: "RelWithDebInfo"
+[1.845s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-all/gz-waves1-all-config.cmake
+[1.845s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-all/gz-waves1-all-config-version.cmake
+[1.845s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-all/gz-waves1-all-targets.cmake
+[1.845s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/detail/Export.hh
+[1.845s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Export.hh
+[1.845s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1.so.1.0.0
+[1.845s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1.so.1
+[1.846s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1.so
+[1.846s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1/gz-waves1-config.cmake
+[1.846s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1/gz-waves1-config-version.cmake
+[1.846s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1/gz-waves1-targets.cmake
+[1.846s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1/gz-waves1-targets-relwithdebinfo.cmake
+[1.846s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1.pc
+[1.846s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/dynamic-geometry-system/detail/Export.hh
+[1.846s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/dynamic-geometry-system/Export.hh
+[1.846s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-dynamic-geometry-system.so.1.0.0
+[1.846s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-dynamic-geometry-system.so.1
+[1.846s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-dynamic-geometry-system.so
+[1.846s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-dynamic-geometry-system/gz-waves1-dynamic-geometry-system-config.cmake
+[1.846s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-dynamic-geometry-system/gz-waves1-dynamic-geometry-system-config-version.cmake
+[1.847s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-dynamic-geometry-system/gz-waves1-dynamic-geometry-system-targets.cmake
+[1.847s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-dynamic-geometry-system/gz-waves1-dynamic-geometry-system-targets-relwithdebinfo.cmake
+[1.847s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1-dynamic-geometry-system.pc
+[1.847s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/hydrodynamics-system/detail/Export.hh
+[1.847s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/hydrodynamics-system/Export.hh
+[1.847s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-hydrodynamics-system.so.1.0.0
+[1.847s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-hydrodynamics-system.so.1
+[1.847s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-hydrodynamics-system.so
+[1.847s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-hydrodynamics-system/gz-waves1-hydrodynamics-system-config.cmake
+[1.847s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-hydrodynamics-system/gz-waves1-hydrodynamics-system-config-version.cmake
+[1.847s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-hydrodynamics-system/gz-waves1-hydrodynamics-system-targets.cmake
+[1.847s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-hydrodynamics-system/gz-waves1-hydrodynamics-system-targets-relwithdebinfo.cmake
+[1.847s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1-hydrodynamics-system.pc
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/rendering/detail/Export.hh
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/rendering/Export.hh
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-rendering.so.1.0.0
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-rendering.so.1
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-rendering.so
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering/gz-waves1-rendering-config.cmake
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering/gz-waves1-rendering-config-version.cmake
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering/gz-waves1-rendering-targets.cmake
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering/gz-waves1-rendering-targets-relwithdebinfo.cmake
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1-rendering.pc
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/rendering-ogre2/detail/Export.hh
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/rendering-ogre2/Export.hh
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-rendering-ogre2.so.1.0.0
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-rendering-ogre2.so.1
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-rendering-ogre2.so
+[1.848s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering-ogre2/gz-waves1-rendering-ogre2-config.cmake
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering-ogre2/gz-waves1-rendering-ogre2-config-version.cmake
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering-ogre2/gz-waves1-rendering-ogre2-targets.cmake
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering-ogre2/gz-waves1-rendering-ogre2-targets-relwithdebinfo.cmake
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1-rendering-ogre2.pc
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/waves-visual-system/detail/Export.hh
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/waves-visual-system/Export.hh
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-waves-visual-system.so.1.0.0
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-waves-visual-system.so.1
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-waves-visual-system.so
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-visual-system/gz-waves1-waves-visual-system-config.cmake
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-visual-system/gz-waves1-waves-visual-system-config-version.cmake
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-visual-system/gz-waves1-waves-visual-system-targets.cmake
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-visual-system/gz-waves1-waves-visual-system-targets-relwithdebinfo.cmake
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1-waves-visual-system.pc
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/waves-model-system/detail/Export.hh
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/waves-model-system/Export.hh
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-waves-model-system.so.1.0.0
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-waves-model-system.so.1
+[1.849s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-waves-model-system.so
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-model-system/gz-waves1-waves-model-system-config.cmake
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-model-system/gz-waves1-waves-model-system-config-version.cmake
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-model-system/gz-waves1-waves-model-system-targets.cmake
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-model-system/gz-waves1-waves-model-system-targets-relwithdebinfo.cmake
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1-waves-model-system.pc
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/components/Wavefield.hh
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Algorithm.hh
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/CGALTypes.hh
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Convert.hh
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Geometry.hh
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Grid.hh
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/LinearRandomFFTWaveSimulation.hh
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/LinearRandomWaveSimulation.hh
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/LinearRegularWaveSimulation.hh
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/MeshTools.hh
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/OceanTile.hh
+[1.850s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/PhysicalConstants.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Physics.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/TriangulatedGrid.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/TrochoidIrregularWaveSimulation.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Types.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Utilities.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/WaveParameters.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/WaveSimulation.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/WaveSpectrum.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/WaveSpreadingFunction.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Wavefield.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/WavefieldSampler.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/config.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/components.hh
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/bin/PLOT_GnuPlotExample
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/bin/PLOT_LinearRandomFFTWaves
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/bin/PLOT_LinearRandomWaves
+[1.851s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/bin/PLOT_LinearRegularWaves
+[1.852s] -- Up-to-date: /home/blueboat_sitl/gz_ws/install/bin/PLOT_WaveSpectrum
+[1.853s] Invoked command in '/home/blueboat_sitl/gz_ws/build/gz-waves1' returned '0': /usr/bin/cmake --install /home/blueboat_sitl/gz_ws/build/gz-waves1

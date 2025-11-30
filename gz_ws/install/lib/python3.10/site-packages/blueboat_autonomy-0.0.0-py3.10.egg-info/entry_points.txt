@@ -1,0 +1,3 @@
+[console_scripts]
+autonomy_node = blueboat_autonomy.main:main
+

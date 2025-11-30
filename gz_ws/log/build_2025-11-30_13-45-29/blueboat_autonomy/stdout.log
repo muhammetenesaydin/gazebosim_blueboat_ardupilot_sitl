@@ -1,0 +1,25 @@
+running develop
+running egg_info
+creating blueboat_autonomy.egg-info
+writing blueboat_autonomy.egg-info/PKG-INFO
+writing dependency_links to blueboat_autonomy.egg-info/dependency_links.txt
+writing entry points to blueboat_autonomy.egg-info/entry_points.txt
+writing requirements to blueboat_autonomy.egg-info/requires.txt
+writing top-level names to blueboat_autonomy.egg-info/top_level.txt
+writing manifest file 'blueboat_autonomy.egg-info/SOURCES.txt'
+reading manifest file 'blueboat_autonomy.egg-info/SOURCES.txt'
+writing manifest file 'blueboat_autonomy.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/blueboat_sitl/gz_ws/install/lib/python3.10/site-packages/blueboat-autonomy.egg-link (link to .)
+Installing ardupilot_interface script to /home/blueboat_sitl/gz_ws/install/bin
+Installing autonomy_node script to /home/blueboat_sitl/gz_ws/install/bin
+
+Installed /home/blueboat_sitl/gz_ws/build/blueboat_autonomy
+running symlink_data
+symbolically linking /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/resource/blueboat_autonomy -> /home/blueboat_sitl/gz_ws/install/share/ament_index/resource_index/packages
+symbolically linking /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/package.xml -> /home/blueboat_sitl/gz_ws/install/share/blueboat_autonomy
+creating /home/blueboat_sitl/gz_ws/install/share/blueboat_autonomy/launch
+symbolically linking /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/launch/autonomy.launch.py -> /home/blueboat_sitl/gz_ws/install/share/blueboat_autonomy/launch
+creating /home/blueboat_sitl/gz_ws/install/lib/blueboat_autonomy
+symbolically linking /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/blueboat_autonomy/main.py -> /home/blueboat_sitl/gz_ws/install/lib/blueboat_autonomy
+symbolically linking /home/blueboat_sitl/gz_ws/build/blueboat_autonomy/blueboat_autonomy/interface/ardupilot_interface.py -> /home/blueboat_sitl/gz_ws/install/lib/blueboat_autonomy

@@ -24,6 +24,12 @@ def generate_launch_description():
                 '/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo',
                 # lidar
                 '/laser_scan@sensor_msgs/msg/LaserScan@ignition.msgs.LaserScan',
+                # ZED Camera - RGB
+                '/zed/rgb/image_raw@sensor_msgs/msg/Image@ignition.msgs.Image',
+                '/zed/rgb/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo',
+                # ZED Camera - Depth
+                '/zed/depth/image_raw@sensor_msgs/msg/Image@ignition.msgs.Image',
+                '/zed/depth/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo',
             ],
             output='screen'
         ),

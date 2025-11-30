@@ -1,0 +1,215 @@
+[0.000000] (-) TimerEvent: {}
+[0.000655] (gz-waves1) JobQueued: {'identifier': 'gz-waves1', 'dependencies': OrderedDict()}
+[0.000772] (move_blueboat) JobQueued: {'identifier': 'move_blueboat', 'dependencies': OrderedDict()}
+[0.001334] (gz-waves1) JobStarted: {'identifier': 'gz-waves1'}
+[0.022161] (move_blueboat) JobStarted: {'identifier': 'move_blueboat'}
+[0.044943] (gz-waves1) JobProgress: {'identifier': 'gz-waves1', 'progress': 'cmake'}
+[0.048270] (gz-waves1) JobProgress: {'identifier': 'gz-waves1', 'progress': 'build'}
+[0.050257] (gz-waves1) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/blueboat_sitl/gz_ws/build/gz-waves1', '--', '-j12', '-l12'], 'cwd': '/home/blueboat_sitl/gz_ws/build/gz-waves1', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/blueboat_sitl/ardupilot_gazebo/build:'), ('GZ_SIM_RESOURCE_PATH', '/home/blueboat_sitl/ardupilot_gazebo/models:/home/blueboat_sitl/ardupilot_gazebo/worlds:'), ('USER', 'blueboat_sitl'), ('HOSTNAME', 'enes'), ('SKIP_AP_GRAPHIC_ENV', '1'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/blueboat_sitl/colcon_ws/install/ros_ign_interfaces/lib:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim/lib:/home/blueboat_sitl/colcon_ws/install/ros_gz_bridge/lib:/home/blueboat_sitl/colcon_ws/install/ros_gz_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/blueboat_sitl'), ('OLDPWD', '/home/blueboat_sitl/colcon_ws'), ('SKIP_AP_EXT_ENV', '1'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/blueboat_sitl/colcon_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/home/blueboat_sitl/ardupilot/Tools/autotest:/home/blueboat_sitl/ardupilot/build/sitl/bin:/home/blueboat_sitl/.local/lib/python3.10/site-packages:/home/blueboat_sitl/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/blueboat_sitl/colcon_ws/install/test_ros_gz_bridge:/home/blueboat_sitl/colcon_ws/install/ros_ign_interfaces:/home/blueboat_sitl/colcon_ws/install/ros_ign:/home/blueboat_sitl/colcon_ws/install/ros_ign_image:/home/blueboat_sitl/colcon_ws/install/ros_ign_gazebo_demos:/home/blueboat_sitl/colcon_ws/install/ros_ign_gazebo:/home/blueboat_sitl/colcon_ws/install/ros_ign_bridge:/home/blueboat_sitl/colcon_ws/install/ros_gz:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim_demos:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim:/home/blueboat_sitl/colcon_ws/install/ros_gz_image:/home/blueboat_sitl/colcon_ws/install/ros_gz_bridge:/home/blueboat_sitl/colcon_ws/install/ros_gz_interfaces:/home/blueboat_sitl/colcon_ws/install/ros2_shared:/opt/ros/humble'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/blueboat_sitl/colcon_ws/install/ros_gz_sim_demos/share'), ('DIST', 'humble'), ('GZ_VERSION', 'garden'), ('PWD', '/home/blueboat_sitl/gz_ws/build/gz-waves1'), ('LC_ALL', 'C.UTF-8'), ('SKIP_AP_GIT_CHECK', '1'), ('PYTHONPATH', '/home/blueboat_sitl/colcon_ws/install/ros_ign_interfaces/local/lib/python3.10/dist-packages:/home/blueboat_sitl/colcon_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('SKIP_AP_COV_ENV', '1'), ('CMAKE_PREFIX_PATH', '/home/blueboat_sitl/colcon_ws/install/test_ros_gz_bridge:/home/blueboat_sitl/colcon_ws/install/ros_ign_interfaces:/home/blueboat_sitl/colcon_ws/install/ros_ign:/home/blueboat_sitl/colcon_ws/install/ros_ign_image:/home/blueboat_sitl/colcon_ws/install/ros_ign_gazebo_demos:/home/blueboat_sitl/colcon_ws/install/ros_ign_gazebo:/home/blueboat_sitl/colcon_ws/install/ros_ign_bridge:/home/blueboat_sitl/colcon_ws/install/ros_gz:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim_demos:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim:/home/blueboat_sitl/colcon_ws/install/ros_gz_image:/home/blueboat_sitl/colcon_ws/install/ros_gz_bridge:/home/blueboat_sitl/colcon_ws/install/ros_gz_interfaces:/home/blueboat_sitl/colcon_ws/install/ros2_shared')]), 'shell': False}
+[0.099519] (-) TimerEvent: {}
+[0.200148] (-) TimerEvent: {}
+[0.200678] (gz-waves1) StdoutLine: {'line': b'[  2%] Built target gtest\n'}
+[0.257085] (gz-waves1) StdoutLine: {'line': b'[  4%] Built target gtest_main\n'}
+[0.300287] (-) TimerEvent: {}
+[0.400765] (-) TimerEvent: {}
+[0.467017] (gz-waves1) StdoutLine: {'line': b'[ 26%] Built target gz-waves1\n'}
+[0.502052] (-) TimerEvent: {}
+[0.570174] (gz-waves1) StdoutLine: {'line': b'[ 27%] Built target UNIT_Algorithm_TEST\n'}
+[0.593679] (gz-waves1) StdoutLine: {'line': b'[ 30%] Built target UNIT_LinearRandomFFTWaveSimulation_TEST\n'}
+[0.596852] (gz-waves1) StdoutLine: {'line': b'[ 32%] Built target UNIT_WaveSpectrum_TEST\n'}
+[0.603563] (gz-waves1) StdoutLine: {'line': b'[ 34%] Built target UNIT_EigenFFTW_TEST\n'}
+[0.604000] (-) TimerEvent: {}
+[0.628921] (gz-waves1) StdoutLine: {'line': b'[ 36%] Built target UNIT_Geometry_TEST\n'}
+[0.638165] (gz-waves1) StdoutLine: {'line': b'[ 38%] Built target UNIT_Grid_TEST\n'}
+[0.642387] (gz-waves1) StdoutLine: {'line': b'[ 40%] Built target UNIT_Wavefield_TEST\n'}
+[0.658669] (gz-waves1) StdoutLine: {'line': b'[ 43%] Built target UNIT_MeshTools_TEST\n'}
+[0.659177] (gz-waves1) StdoutLine: {'line': b'[ 44%] Built target UNIT_LinearRegularWaveSimulation_TEST\n'}
+[0.677266] (gz-waves1) StdoutLine: {'line': b'[ 46%] Built target UNIT_TriangulatedGrid_TEST\n'}
+[0.680356] (gz-waves1) StdoutLine: {'line': b'[ 47%] Built target UNIT_WaveSpreadingFunction_TEST\n'}
+[0.688403] (gz-waves1) StdoutLine: {'line': b'[ 49%] Built target UNIT_Physics_TEST\n'}
+[0.699983] (gz-waves1) StdoutLine: {'line': b'[ 51%] Built target UNIT_CGAL_TEST\n'}
+[0.704579] (-) TimerEvent: {}
+[0.745684] (gz-waves1) StdoutLine: {'line': b'[ 53%] Built target PERFORMANCE_EigenReturnByValue\n'}
+[0.746277] (gz-waves1) StdoutLine: {'line': b'[ 54%] Built target PERFORMANCE_LinearRandomFFTWaveSimBaseAmplitudes\n'}
+[0.765150] (gz-waves1) StdoutLine: {'line': b'[ 56%] Built target gz-waves1-waves-model-system\n'}
+[0.768366] (gz-waves1) StdoutLine: {'line': b'[ 59%] Built target gz-waves1-dynamic-geometry-system\n'}
+[0.772384] (gz-waves1) StdoutLine: {'line': b'[ 61%] Built target PERFORMANCE_LinearRandomFFTWaveSimCurrentAmplitudes\n'}
+[0.780629] (gz-waves1) StdoutLine: {'line': b'[ 63%] Built target PERFORMANCE_LinearRandomFFTWaveSimDisplacements\n'}
+[0.782049] (gz-waves1) StdoutLine: {'line': b'[ 65%] Built target PERFORMANCE_LinearRegularWaveSimDisplacements\n'}
+[0.806046] (gz-waves1) StdoutLine: {'line': b'[ 67%] Built target gz-waves1-hydrodynamics-system\n'}
+[0.806495] (-) TimerEvent: {}
+[0.806834] (gz-waves1) StdoutLine: {'line': b'[ 69%] Built target PERFORMANCE_LinearRandomFFTWaveSimElevationAt\n'}
+[0.811046] (gz-waves1) StdoutLine: {'line': b'[ 70%] Built target PLOT_GnuPlotExample\n'}
+[0.824031] (gz-waves1) StdoutLine: {'line': b'[ 73%] Built target PERFORMANCE_WaveSpectrumECKV\n'}
+[0.851461] (gz-waves1) StdoutLine: {'line': b'[ 75%] Built target PLOT_LinearRandomWaves\n'}
+[0.853043] (gz-waves1) StdoutLine: {'line': b'[ 77%] Built target PLOT_LinearRandomFFTWaves\n'}
+[0.860514] (gz-waves1) StdoutLine: {'line': b'[ 79%] Built target PLOT_WaveSpectrum\n'}
+[0.873385] (gz-waves1) StdoutLine: {'line': b'[ 81%] Built target PLOT_LinearRegularWaves\n'}
+[0.886692] (gz-waves1) StdoutLine: {'line': b'[ 91%] Built target gz-waves1-rendering\n'}
+[0.906655] (-) TimerEvent: {}
+[0.995773] (gz-waves1) StdoutLine: {'line': b'[ 93%] Built target gz-waves1-waves-visual-system\n'}
+[1.006805] (-) TimerEvent: {}
+[1.042263] (gz-waves1) StdoutLine: {'line': b'[100%] Built target gz-waves1-rendering-ogre2\n'}
+[1.073613] (gz-waves1) CommandEnded: {'returncode': 0}
+[1.076011] (gz-waves1) JobProgress: {'identifier': 'gz-waves1', 'progress': 'install'}
+[1.095090] (gz-waves1) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/blueboat_sitl/gz_ws/build/gz-waves1'], 'cwd': '/home/blueboat_sitl/gz_ws/build/gz-waves1', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/blueboat_sitl/ardupilot_gazebo/build:'), ('GZ_SIM_RESOURCE_PATH', '/home/blueboat_sitl/ardupilot_gazebo/models:/home/blueboat_sitl/ardupilot_gazebo/worlds:'), ('USER', 'blueboat_sitl'), ('HOSTNAME', 'enes'), ('SKIP_AP_GRAPHIC_ENV', '1'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/blueboat_sitl/colcon_ws/install/ros_ign_interfaces/lib:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim/lib:/home/blueboat_sitl/colcon_ws/install/ros_gz_bridge/lib:/home/blueboat_sitl/colcon_ws/install/ros_gz_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/blueboat_sitl'), ('OLDPWD', '/home/blueboat_sitl/colcon_ws'), ('SKIP_AP_EXT_ENV', '1'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/blueboat_sitl/colcon_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/home/blueboat_sitl/ardupilot/Tools/autotest:/home/blueboat_sitl/ardupilot/build/sitl/bin:/home/blueboat_sitl/.local/lib/python3.10/site-packages:/home/blueboat_sitl/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/blueboat_sitl/colcon_ws/install/test_ros_gz_bridge:/home/blueboat_sitl/colcon_ws/install/ros_ign_interfaces:/home/blueboat_sitl/colcon_ws/install/ros_ign:/home/blueboat_sitl/colcon_ws/install/ros_ign_image:/home/blueboat_sitl/colcon_ws/install/ros_ign_gazebo_demos:/home/blueboat_sitl/colcon_ws/install/ros_ign_gazebo:/home/blueboat_sitl/colcon_ws/install/ros_ign_bridge:/home/blueboat_sitl/colcon_ws/install/ros_gz:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim_demos:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim:/home/blueboat_sitl/colcon_ws/install/ros_gz_image:/home/blueboat_sitl/colcon_ws/install/ros_gz_bridge:/home/blueboat_sitl/colcon_ws/install/ros_gz_interfaces:/home/blueboat_sitl/colcon_ws/install/ros2_shared:/opt/ros/humble'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/blueboat_sitl/colcon_ws/install/ros_gz_sim_demos/share'), ('DIST', 'humble'), ('GZ_VERSION', 'garden'), ('PWD', '/home/blueboat_sitl/gz_ws/build/gz-waves1'), ('LC_ALL', 'C.UTF-8'), ('SKIP_AP_GIT_CHECK', '1'), ('PYTHONPATH', '/home/blueboat_sitl/colcon_ws/install/ros_ign_interfaces/local/lib/python3.10/dist-packages:/home/blueboat_sitl/colcon_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('SKIP_AP_COV_ENV', '1'), ('CMAKE_PREFIX_PATH', '/home/blueboat_sitl/colcon_ws/install/test_ros_gz_bridge:/home/blueboat_sitl/colcon_ws/install/ros_ign_interfaces:/home/blueboat_sitl/colcon_ws/install/ros_ign:/home/blueboat_sitl/colcon_ws/install/ros_ign_image:/home/blueboat_sitl/colcon_ws/install/ros_ign_gazebo_demos:/home/blueboat_sitl/colcon_ws/install/ros_ign_gazebo:/home/blueboat_sitl/colcon_ws/install/ros_ign_bridge:/home/blueboat_sitl/colcon_ws/install/ros_gz:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim_demos:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim:/home/blueboat_sitl/colcon_ws/install/ros_gz_image:/home/blueboat_sitl/colcon_ws/install/ros_gz_bridge:/home/blueboat_sitl/colcon_ws/install/ros_gz_interfaces:/home/blueboat_sitl/colcon_ws/install/ros2_shared')]), 'shell': False}
+[1.106967] (-) TimerEvent: {}
+[1.112865] (gz-waves1) StdoutLine: {'line': b'-- Install configuration: "RelWithDebInfo"\n'}
+[1.113303] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-all/gz-waves1-all-config.cmake\n'}
+[1.113483] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-all/gz-waves1-all-config-version.cmake\n'}
+[1.114590] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-all/gz-waves1-all-targets.cmake\n'}
+[1.116601] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/detail/Export.hh\n'}
+[1.117019] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Export.hh\n'}
+[1.117974] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1.so.1.0.0\n'}
+[1.118374] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1.so.1\n'}
+[1.118723] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1.so\n'}
+[1.119004] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1/gz-waves1-config.cmake\n'}
+[1.119259] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1/gz-waves1-config-version.cmake\n'}
+[1.119876] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1/gz-waves1-targets.cmake\n'}
+[1.120268] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1/gz-waves1-targets-relwithdebinfo.cmake\n'}
+[1.120593] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1.pc\n'}
+[1.123000] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/dynamic-geometry-system/detail/Export.hh\n'}
+[1.123458] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/dynamic-geometry-system/Export.hh\n'}
+[1.124294] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-dynamic-geometry-system.so.1.0.0\n'}
+[1.124640] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-dynamic-geometry-system.so.1\n'}
+[1.125169] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-dynamic-geometry-system.so\n'}
+[1.125618] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-dynamic-geometry-system/gz-waves1-dynamic-geometry-system-config.cmake\n'}
+[1.125961] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-dynamic-geometry-system/gz-waves1-dynamic-geometry-system-config-version.cmake\n'}
+[1.126722] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-dynamic-geometry-system/gz-waves1-dynamic-geometry-system-targets.cmake\n'}
+[1.127101] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-dynamic-geometry-system/gz-waves1-dynamic-geometry-system-targets-relwithdebinfo.cmake\n'}
+[1.127381] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1-dynamic-geometry-system.pc\n'}
+[1.128394] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/hydrodynamics-system/detail/Export.hh\n'}
+[1.128809] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/hydrodynamics-system/Export.hh\n'}
+[1.129669] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-hydrodynamics-system.so.1.0.0\n'}
+[1.129984] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-hydrodynamics-system.so.1\n'}
+[1.130466] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-hydrodynamics-system.so\n'}
+[1.130826] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-hydrodynamics-system/gz-waves1-hydrodynamics-system-config.cmake\n'}
+[1.131075] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-hydrodynamics-system/gz-waves1-hydrodynamics-system-config-version.cmake\n'}
+[1.131799] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-hydrodynamics-system/gz-waves1-hydrodynamics-system-targets.cmake\n'}
+[1.132173] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-hydrodynamics-system/gz-waves1-hydrodynamics-system-targets-relwithdebinfo.cmake\n'}
+[1.132428] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1-hydrodynamics-system.pc\n'}
+[1.134194] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/rendering/detail/Export.hh\n'}
+[1.134561] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/rendering/Export.hh\n'}
+[1.135387] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-rendering.so.1.0.0\n'}
+[1.135736] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-rendering.so.1\n'}
+[1.136290] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-rendering.so\n'}
+[1.136640] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering/gz-waves1-rendering-config.cmake\n'}
+[1.136799] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering/gz-waves1-rendering-config-version.cmake\n'}
+[1.137564] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering/gz-waves1-rendering-targets.cmake\n'}
+[1.137880] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering/gz-waves1-rendering-targets-relwithdebinfo.cmake\n'}
+[1.138130] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1-rendering.pc\n'}
+[1.138422] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/rendering-ogre2/detail/Export.hh\n'}
+[1.138615] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/rendering-ogre2/Export.hh\n'}
+[1.139950] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-rendering-ogre2.so.1.0.0\n'}
+[1.140144] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-rendering-ogre2.so.1\n'}
+[1.140441] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-rendering-ogre2.so\n'}
+[1.140657] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering-ogre2/gz-waves1-rendering-ogre2-config.cmake\n'}
+[1.140801] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering-ogre2/gz-waves1-rendering-ogre2-config-version.cmake\n'}
+[1.141297] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering-ogre2/gz-waves1-rendering-ogre2-targets.cmake\n'}
+[1.141660] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-rendering-ogre2/gz-waves1-rendering-ogre2-targets-relwithdebinfo.cmake\n'}
+[1.141838] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1-rendering-ogre2.pc\n'}
+[1.142052] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/waves-visual-system/detail/Export.hh\n'}
+[1.142201] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/waves-visual-system/Export.hh\n'}
+[1.142645] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-waves-visual-system.so.1.0.0\n'}
+[1.142905] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-waves-visual-system.so.1\n'}
+[1.143147] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-waves-visual-system.so\n'}
+[1.143386] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-visual-system/gz-waves1-waves-visual-system-config.cmake\n'}
+[1.143558] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-visual-system/gz-waves1-waves-visual-system-config-version.cmake\n'}
+[1.143914] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-visual-system/gz-waves1-waves-visual-system-targets.cmake\n'}
+[1.144227] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-visual-system/gz-waves1-waves-visual-system-targets-relwithdebinfo.cmake\n'}
+[1.144474] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1-waves-visual-system.pc\n'}
+[1.144617] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/waves-model-system/detail/Export.hh\n'}
+[1.144751] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/waves-model-system/Export.hh\n'}
+[1.145328] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-waves-model-system.so.1.0.0\n'}
+[1.145724] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-waves-model-system.so.1\n'}
+[1.145988] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/libgz-waves1-waves-model-system.so\n'}
+[1.146246] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-model-system/gz-waves1-waves-model-system-config.cmake\n'}
+[1.146391] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-model-system/gz-waves1-waves-model-system-config-version.cmake\n'}
+[1.147016] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-model-system/gz-waves1-waves-model-system-targets.cmake\n'}
+[1.147429] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/cmake/gz-waves1-waves-model-system/gz-waves1-waves-model-system-targets-relwithdebinfo.cmake\n'}
+[1.147587] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/lib/pkgconfig/gz-waves1-waves-model-system.pc\n'}
+[1.149804] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/components/Wavefield.hh\n'}
+[1.150188] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Algorithm.hh\n'}
+[1.150361] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/CGALTypes.hh\n'}
+[1.150509] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Convert.hh\n'}
+[1.150651] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Geometry.hh\n'}
+[1.150961] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Grid.hh\n'}
+[1.151194] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/LinearRandomFFTWaveSimulation.hh\n'}
+[1.151339] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/LinearRandomWaveSimulation.hh\n'}
+[1.151479] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/LinearRegularWaveSimulation.hh\n'}
+[1.151621] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/MeshTools.hh\n'}
+[1.151763] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/OceanTile.hh\n'}
+[1.151901] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/PhysicalConstants.hh\n'}
+[1.152060] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Physics.hh\n'}
+[1.152303] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/TriangulatedGrid.hh\n'}
+[1.152442] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/TrochoidIrregularWaveSimulation.hh\n'}
+[1.152574] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Types.hh\n'}
+[1.152712] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Utilities.hh\n'}
+[1.152841] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/WaveParameters.hh\n'}
+[1.152986] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/WaveSimulation.hh\n'}
+[1.153154] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/WaveSpectrum.hh\n'}
+[1.153283] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/WaveSpreadingFunction.hh\n'}
+[1.153468] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/Wavefield.hh\n'}
+[1.153603] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/WavefieldSampler.hh\n'}
+[1.153857] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves.hh\n'}
+[1.154010] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/config.hh\n'}
+[1.154147] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/include/gz/waves1/gz/waves/components.hh\n'}
+[1.154506] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/bin/PLOT_GnuPlotExample\n'}
+[1.155568] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/bin/PLOT_LinearRandomFFTWaves\n'}
+[1.156908] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/bin/PLOT_LinearRandomWaves\n'}
+[1.158169] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/bin/PLOT_LinearRegularWaves\n'}
+[1.159177] (gz-waves1) StdoutLine: {'line': b'-- Up-to-date: /home/blueboat_sitl/gz_ws/install/bin/PLOT_WaveSpectrum\n'}
+[1.162999] (gz-waves1) CommandEnded: {'returncode': 0}
+[1.205849] (gz-waves1) JobEnded: {'identifier': 'gz-waves1', 'rc': 0}
+[1.206984] (-) TimerEvent: {}
+[1.307546] (-) TimerEvent: {}
+[1.408086] (-) TimerEvent: {}
+[1.508633] (-) TimerEvent: {}
+[1.609188] (-) TimerEvent: {}
+[1.709653] (-) TimerEvent: {}
+[1.793987] (move_blueboat) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/blueboat_sitl/gz_ws/build/move_blueboat/build', '--no-deps', 'symlink_data'], 'cwd': '/home/blueboat_sitl/gz_ws/build/move_blueboat', 'env': {'GZ_SIM_SYSTEM_PLUGIN_PATH': '/home/blueboat_sitl/ardupilot_gazebo/build:', 'GZ_SIM_RESOURCE_PATH': '/home/blueboat_sitl/ardupilot_gazebo/models:/home/blueboat_sitl/ardupilot_gazebo/worlds:', 'USER': 'blueboat_sitl', 'HOSTNAME': 'enes', 'SKIP_AP_GRAPHIC_ENV': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/blueboat_sitl/colcon_ws/install/ros_ign_interfaces/lib:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim/lib:/home/blueboat_sitl/colcon_ws/install/ros_gz_bridge/lib:/home/blueboat_sitl/colcon_ws/install/ros_gz_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/blueboat_sitl', 'OLDPWD': '/home/blueboat_sitl/colcon_ws', 'SKIP_AP_EXT_ENV': '1', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/home/blueboat_sitl/colcon_ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/home/blueboat_sitl/ardupilot/Tools/autotest:/home/blueboat_sitl/ardupilot/build/sitl/bin:/home/blueboat_sitl/.local/lib/python3.10/site-packages:/home/blueboat_sitl/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'XAUTHORITY': '/tmp/.docker.xauth', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/blueboat_sitl/colcon_ws/install/test_ros_gz_bridge:/home/blueboat_sitl/colcon_ws/install/ros_ign_interfaces:/home/blueboat_sitl/colcon_ws/install/ros_ign:/home/blueboat_sitl/colcon_ws/install/ros_ign_image:/home/blueboat_sitl/colcon_ws/install/ros_ign_gazebo_demos:/home/blueboat_sitl/colcon_ws/install/ros_ign_gazebo:/home/blueboat_sitl/colcon_ws/install/ros_ign_bridge:/home/blueboat_sitl/colcon_ws/install/ros_gz:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim_demos:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim:/home/blueboat_sitl/colcon_ws/install/ros_gz_image:/home/blueboat_sitl/colcon_ws/install/ros_gz_bridge:/home/blueboat_sitl/colcon_ws/install/ros_gz_interfaces:/home/blueboat_sitl/colcon_ws/install/ros2_shared:/opt/ros/humble', 'IGN_GAZEBO_RESOURCE_PATH': '/home/blueboat_sitl/colcon_ws/install/ros_gz_sim_demos/share', 'DIST': 'humble', 'GZ_VERSION': 'garden', 'PWD': '/home/blueboat_sitl/gz_ws/build/move_blueboat', 'LC_ALL': 'C.UTF-8', 'SKIP_AP_GIT_CHECK': '1', 'PYTHONPATH': '/home/blueboat_sitl/gz_ws/build/move_blueboat/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/blueboat_sitl/gz_ws/install/lib/python3.10/site-packages:/home/blueboat_sitl/colcon_ws/install/ros_ign_interfaces/local/lib/python3.10/dist-packages:/home/blueboat_sitl/colcon_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'SKIP_AP_COV_ENV': '1', 'CMAKE_PREFIX_PATH': '/home/blueboat_sitl/colcon_ws/install/test_ros_gz_bridge:/home/blueboat_sitl/colcon_ws/install/ros_ign_interfaces:/home/blueboat_sitl/colcon_ws/install/ros_ign:/home/blueboat_sitl/colcon_ws/install/ros_ign_image:/home/blueboat_sitl/colcon_ws/install/ros_ign_gazebo_demos:/home/blueboat_sitl/colcon_ws/install/ros_ign_gazebo:/home/blueboat_sitl/colcon_ws/install/ros_ign_bridge:/home/blueboat_sitl/colcon_ws/install/ros_gz:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim_demos:/home/blueboat_sitl/colcon_ws/install/ros_gz_sim:/home/blueboat_sitl/colcon_ws/install/ros_gz_image:/home/blueboat_sitl/colcon_ws/install/ros_gz_bridge:/home/blueboat_sitl/colcon_ws/install/ros_gz_interfaces:/home/blueboat_sitl/colcon_ws/install/ros2_shared'}, 'shell': False}
+[1.809791] (-) TimerEvent: {}
+[1.910306] (-) TimerEvent: {}
+[2.010888] (-) TimerEvent: {}
+[2.111454] (-) TimerEvent: {}
+[2.212046] (-) TimerEvent: {}
+[2.312581] (-) TimerEvent: {}
+[2.413129] (-) TimerEvent: {}
+[2.436707] (move_blueboat) StdoutLine: {'line': b'running develop\n'}
+[2.513332] (-) TimerEvent: {}
+[2.613804] (-) TimerEvent: {}
+[2.714381] (-) TimerEvent: {}
+[2.776969] (move_blueboat) StdoutLine: {'line': b'running egg_info\n'}
+[2.777521] (move_blueboat) StdoutLine: {'line': b'writing move_blueboat.egg-info/PKG-INFO\n'}
+[2.778034] (move_blueboat) StdoutLine: {'line': b'writing dependency_links to move_blueboat.egg-info/dependency_links.txt\n'}
+[2.778438] (move_blueboat) StdoutLine: {'line': b'writing entry points to move_blueboat.egg-info/entry_points.txt\n'}
+[2.778687] (move_blueboat) StdoutLine: {'line': b'writing requirements to move_blueboat.egg-info/requires.txt\n'}
+[2.778848] (move_blueboat) StdoutLine: {'line': b'writing top-level names to move_blueboat.egg-info/top_level.txt\n'}
+[2.783215] (move_blueboat) StdoutLine: {'line': b"reading manifest file 'move_blueboat.egg-info/SOURCES.txt'\n"}
+[2.785369] (move_blueboat) StdoutLine: {'line': b"writing manifest file 'move_blueboat.egg-info/SOURCES.txt'\n"}
+[2.788346] (move_blueboat) StdoutLine: {'line': b'running build_ext\n'}
+[2.788906] (move_blueboat) StdoutLine: {'line': b'Creating /home/blueboat_sitl/gz_ws/install/lib/python3.10/site-packages/move-blueboat.egg-link (link to .)\n'}
+[2.790924] (move_blueboat) StdoutLine: {'line': b'Installing dp_beacon_dvl_run_boat_waypoint script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.791325] (move_blueboat) StdoutLine: {'line': b'Installing dp_run script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.791579] (move_blueboat) StdoutLine: {'line': b'Installing gui_joy_controller script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.791761] (move_blueboat) StdoutLine: {'line': b'Installing joy_sim_controller script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.791927] (move_blueboat) StdoutLine: {'line': b'Installing key_controller script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.792091] (move_blueboat) StdoutLine: {'line': b'Installing mission_planner_blueboat script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.792314] (move_blueboat) StdoutLine: {'line': b'Installing mpc_controller_for_boat_mission script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.792577] (move_blueboat) StdoutLine: {'line': b'Installing pid_controller_for_boat_mission script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.792719] (move_blueboat) StdoutLine: {'line': b'Installing robot_controller script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.792982] (move_blueboat) StdoutLine: {'line': b'Installing run_blueboat_mission script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.793135] (move_blueboat) StdoutLine: {'line': b'Installing run_horizion_mpc script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.793383] (move_blueboat) StdoutLine: {'line': b'Installing run_mission script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.793550] (move_blueboat) StdoutLine: {'line': b'Installing run_mpc script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.793684] (move_blueboat) StdoutLine: {'line': b'Installing thread_dp_run_with_heading script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.793945] (move_blueboat) StdoutLine: {'line': b'Installing thrust_allocator script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.794095] (move_blueboat) StdoutLine: {'line': b'Installing watchdog script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.794298] (move_blueboat) StdoutLine: {'line': b'Installing way_controller_for_boat_mission script to /home/blueboat_sitl/gz_ws/install/lib/move_blueboat\n'}
+[2.794546] (move_blueboat) StdoutLine: {'line': b'\n'}
+[2.794694] (move_blueboat) StdoutLine: {'line': b'Installed /home/blueboat_sitl/gz_ws/build/move_blueboat\n'}
+[2.794886] (move_blueboat) StdoutLine: {'line': b'running symlink_data\n'}
+[2.814626] (-) TimerEvent: {}
+[2.843130] (move_blueboat) CommandEnded: {'returncode': 0}
+[2.874683] (move_blueboat) JobEnded: {'identifier': 'move_blueboat', 'rc': 0}
+[2.876515] (-) EventReactorShutdown: {}
