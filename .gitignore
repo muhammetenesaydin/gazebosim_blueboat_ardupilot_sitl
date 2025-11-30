@@ -4,3 +4,12 @@ gz_ws/log/
 gz_ws/build/
 gz_ws/install/
 gz_ws/log/
+# ROS 2 Build artifacts
+gz_ws/build/
+gz_ws/install/
+gz_ws/log/
+
+# Python cache
+**/__pycache__/
+*.pyc
+*.pyo

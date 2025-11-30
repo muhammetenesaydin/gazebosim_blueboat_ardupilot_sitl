@@ -1,2 +1,0 @@
-setuptools
-tf2_ros
