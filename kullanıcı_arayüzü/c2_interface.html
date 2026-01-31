@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueBoat Tactical C2 Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+        body {
+            background-color: #0a0a0b;
+            color: #4ade80;
+            font-family: 'JetBrains+Mono', monospace;
+            overflow: hidden;
+        }
+
+        .tactical-border {
+            border: 1px solid #14532d;
+            position: relative;
+        }
+
+        .tactical-border::before,
+        .tactical-border::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #4ade80;
+        }
+
+        .top-left::before {
+            top: -2px;
+            left: -2px;
+            border-right: 0;
+            border-bottom: 0;
+        }
+
+        .top-right::after {
+            top: -2px;
+            right: -2px;
+            border-left: 0;
+            border-bottom: 0;
+        }
+
+        .bottom-left::before {
+            bottom: -2px;
+            left: -2px;
+            border-right: 0;
+            border-top: 0;
+        }
+
+        .bottom-right::after {
+            bottom: -2px;
+            right: -2px;
+            border-left: 0;
+            border-top: 0;
+        }
+
+        .hud-scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+            z-index: 100;
+            opacity: 0.3;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+            background: #0a0a0b;
+            filter: invert(100%) hue-rotate(180deg) brightness(0.6) contrast(1.2);
+        }
+
+        .btn-tactical {
+            background: rgba(20, 83, 45, 0.3);
+            border: 1px solid #14532d;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .btn-tactical:hover {
+            background: rgba(74, 222, 128, 0.2);
+            border-color: #4ade80;
+            box-shadow: 0 0 10px rgba(74, 222, 128, 0.3);
+        }
+
+        .btn-danger {
+            background: rgba(153, 27, 27, 0.3);
+            border-color: #991b1b;
+            color: #f87171;
+        }
+
+        .btn-danger:hover {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+        }
+
+        .status-value {
+            color: #facc15;
+        }
+
+        .glitch-text {
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 1px 0 #ef4444, -1px 0 #3b82f6;
+            }
+
+            25% {
+                text-shadow: -1px 0 #ef4444, 1px 0 #3b82f6;
+            }
+
+            50% {
+                text-shadow: 1px 1px #ef4444, -1px -1px #3b82f6;
+            }
+
+            75% {
+                text-shadow: -1px -1px #ef4444, 1px 1px #3b82f6;
+            }
+
+            100% {
+                text-shadow: 1px 0 #ef4444, -1px 0 #3b82f6;
+            }
+
+        }
+
+        .tactical-tooltip {
+            background: rgba(0, 0, 0, 0.8) !important;
+            border: 1px solid #3b82f6 !important;
+            color: #3b82f6 !important;
+            font-family: 'Courier New', Courier, monospace !important;
+            font-size: 8px !important;
+            font-weight: bold !important;
+            padding: 2px 4px !important;
+        }
+
+        .hud-container {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            background: #000;
+            overflow: hidden;
+            border: 1px solid #14532d;
+        }
+
+        #hudCanvas {
+            width: 100%;
+            height: 100%;
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+
+<body class="h-screen flex flex-col p-4 gap-4">
+    <div class="hud-scanline"></div>
+
+    <!-- Header -->
+    <div class="flex justify-between items-center tactical-border p-4 bg-slate-900/50 top-left top-right">
+        <div>
+            <h1 class="text-2xl font-bold tracking-tighter flex items-center gap-3">
+                <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
+                STNM KOMUTA KONTROL [C2]
+            </h1>
+            <p class="text-[10px] text-green-700">SİSTEM: <span id="val-status" class="text-green-400">NOMINAL</span> //
+                LINK: <span id="val-mission-state" class="text-blue-400">WAITING</span></p>
+        </div>
+        <div class="flex gap-6 items-center">
+            <div class="text-right">
+                <p class="text-[10px] text-green-700 uppercase">Bağlantı</p>
+                <p id="conn-status" class="text-red-500 font-bold">DISCONNECTED</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <input type="text" id="jetson-ip" value="localhost"
+                    class="bg-black border border-green-900 px-2 py-1 text-[10px] focus:outline-none focus:border-green-500 w-32"
+                    placeholder="Localhost">
+                <button onclick="connect()" class="btn-tactical text-[10px] px-2 py-0.5">BAĞLAN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex gap-4 overflow-hidden">
+
+        <!-- Left Panel: HUD & Telemetry -->
+        <div class="w-96 flex flex-col gap-4">
+            <!-- Power & Signal -->
+            <div class="tactical-border p-4 bg-slate-900/30 flex-1 bottom-left">
+                <h2 class="text-xs font-bold mb-4 border-b border-green-900 pb-1">SİSTEM VERİLERİ</h2>
+                <div class="space-y-2 text-[11px]">
+                    <div class="flex justify-between"><span>BATTERY:</span> <span id="val-volt"
+                            class="status-value">0.0V</span></div>
+                    <div class="flex justify-between"><span>MODE:</span> <span id="val-mode"
+                            class="status-value">---</span></div>
+                    <div class="flex justify-between"><span>STATE:</span> <span id="val-arm"
+                            class="status-value">---</span></div>
+                    <div class="border-t border-green-900/30 my-1"></div>
+
+                    <!-- Signal Health -->
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-[10px] text-green-700">
+                            <span>LOCAL RSSI:</span>
+                            <span id="txt-rssi">0</span>
+                        </div>
+                        <div class="w-full bg-green-950/50 h-1.5 border border-green-900">
+                            <div id="bar-rssi" class="bg-green-500 h-full transition-all" style="width: 0%"></div>
+                        </div>
+                        <div class="flex justify-between text-[10px] text-blue-700">
+                            <span>REMOTE RSSI:</span>
+                            <span id="txt-remrssi">0</span>
+                        </div>
+                        <div class="w-full bg-blue-950/50 h-1.5 border border-blue-900">
+                            <div id="bar-remrssi" class="bg-blue-500 h-full transition-all" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-green-900/30 my-1"></div>
+                    <div class="flex justify-between"><span>HEADING:</span> <span id="val-head"
+                            class="status-value">0°</span></div>
+                    <div class="flex justify-between"><span>SPEED:</span> <span id="val-gspeed" class="status-value">0.0
+                            m/s</span></div>
+                </div>
+
+                <div class="mt-4">
+                    <h2 class="text-xs font-bold mb-2 border-b border-green-900 pb-1">TACTICAL HUD [PFD]</h2>
+                    <div class="hud-container bottom-left bottom-right">
+                        <canvas id="hudCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commands -->
+            <div class="tactical-border p-4 bg-slate-900/30 h-64 bottom-left">
+                <h2 class="text-xs font-bold mb-4 border-b border-green-900 pb-1">KOMUT MERKEZİ</h2>
+                <div class="grid grid-cols-1 gap-2">
+                    <button onclick="sendCommand('arm', true)" class="btn-tactical py-2 text-xs text-green-400">ARM
+                        VEHICLE</button>
+                    <button onclick="sendCommand('arm', false)" class="btn-tactical btn-danger py-2 text-xs">DISARM
+                        VEHICLE</button>
+                    <div class="grid grid-cols-2 gap-2 mt-2">
+                        <button onclick="sendCommand('set_mode', 'GUIDED')"
+                            class="btn-tactical py-2 text-[10px]">GUIDED</button>
+                        <button onclick="sendCommand('set_mode', 'MANUAL')"
+                            class="btn-tactical py-2 text-[10px]">MANUAL</button>
+                        <button onclick="sendCommand('set_mode', 'RTL')" class="btn-tactical py-2 text-[10px]">RTL (EVE
+                            DÖN)</button>
+                        <button onclick="sendCommand('set_mode', 'STABILIZE')"
+                            class="btn-tactical py-2 text-[10px]">STABILIZE</button>
+                    </div>
+                    <!-- Pro Debug Tools -->
+                    <div class="mt-4 pt-2 border-t border-green-900/50">
+                        <button onclick="sendCommand('get_log')"
+                            class="w-full bg-blue-900/20 border border-blue-900 text-blue-400 text-[9px] py-1 hover:bg-blue-900/40 transition-all">
+                            JETSON SİSTEM GÜNLÜĞÜNÜ ÇEK [REMOTE LOG]
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Center: Tactical Map -->
+        <div class="flex-1 tactical-border bg-black relative overflow-hidden bottom-right">
+            <div id="map"></div>
+            <!-- Map Overlays -->
+            <div class="absolute top-4 right-4 z-[1000] bg-black/80 p-2 tactical-border text-[10px] space-y-1">
+                <p>LAT: <span id="map-lat">0.000000</span></p>
+                <p>LON: <span id="map-lon">0.000000</span></p>
+                <p>ALT: <span id="map-alt">0.0m</span></p>
+            </div>
+
+            <!-- Mission Controls Overlay -->
+            <div class="absolute top-4 left-4 z-[1000] flex flex-col gap-2">
+                <button id="btn-mission-toggle" onclick="toggleMissionMode()"
+                    class="btn-tactical text-[10px] px-3 py-1 bg-blue-900/30 border-blue-600">MISSION PLANNER:
+                    OFF</button>
+                <div id="mission-actions"
+                    class="hidden flex flex-col gap-2 bg-black/80 p-2 tactical-border border-blue-600/50">
+                    <p class="text-[9px] text-blue-400 font-bold uppercase border-b border-blue-900 pb-1">Waypoints:
+                        <span id="wp-count">0</span>
+                    </p>
+
+                    <!-- Manual Input -->
+                    <div class="flex flex-col gap-1 p-1 bg-blue-900/10 border border-blue-900/30">
+                        <input type="number" id="manual-lat" placeholder="Latitude" step="0.000001"
+                            class="bg-black text-[9px] px-1 border border-blue-900/50 text-blue-400">
+                        <input type="number" id="manual-lon" placeholder="Longitude" step="0.000001"
+                            class="bg-black text-[9px] px-1 border border-blue-900/50 text-blue-400">
+                        <button onclick="addManualWP()" class="btn-tactical text-[8px] py-0.5 bg-blue-900/40">ADD
+                            COORD</button>
+                    </div>
+
+                    <button onclick="uploadMission()"
+                        class="btn-tactical text-[9px] px-2 py-1 bg-green-900/40 border-green-600">UPLOAD TO
+                        VEHICLE</button>
+                    <button onclick="clearMissionUI()"
+                        class="btn-tactical text-[9px] px-2 py-1 bg-red-900/40 border-red-600">CLEAR LOCAL</button>
+                    <button onclick="sendCommand('clear_mission')" class="btn-tactical text-[9px] px-2 py-1">CLEAR
+                        REMOTE</button>
+                </div>
+            </div>
+
+            <div class="absolute bottom-4 left-4 z-[1000] pointer-events-none opacity-50">
+                <p class="text-[8px] tracking-widest uppercase">Tactical Grid Overlay // Sector 7G</p>
+            </div>
+        </div>
+
+        <!-- Right Panel: Mission Log -->
+        <div class="w-80 tactical-border p-4 bg-slate-900/30 flex flex-col bottom-right">
+            <h2 class="text-xs font-bold mb-2 border-b border-green-900 pb-1">GÖREV GÜNLÜĞÜ</h2>
+            <div id="log" class="flex-1 overflow-y-auto text-[9px] space-y-1 font-mono scrollbar-hide">
+                <p class="text-green-900">[00:00:00] SYSTEM BOOT INITIALIZED...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let socket;
+        let map, marker, path;
+        let hudCanvas, hudCtx;
+        let telemetryData = {
+            roll: 0, pitch: 0, yaw: 0, heading: 0,
+            groundspeed: 0, airspeed: 0, alt: 0, climb: 0,
+            voltage: 0, throttle: 0, armed: false, mode: '---'
+        };
+
+        // Mission State
+        let missionMode = false;
+        let missionWaypoints = [];
+        let missionMarkers = [];
+        let missionPolyline = null;
+
+        function initMap() {
+            map = L.map('map').setView([0, 0], 2);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+            }).addTo(map);
+
+            marker = L.marker([0, 0]).addTo(map);
+            path = L.polyline([], { color: '#4ade80', weight: 2, opacity: 0.6 }).addTo(map);
+
+            missionPolyline = L.polyline([], { color: '#3b82f6', weight: 2, dashArray: '5, 10' }).addTo(map);
+            map.on('click', onMapClick);
+        }
+
+        function onMapClick(e) {
+            if (!missionMode) return;
+
+            const lat = e.latlng.lat;
+            const lon = e.latlng.lng;
+
+            // Add waypoint
+            missionWaypoints.push({ lat, lon });
+
+            // Add marker
+            const m = L.circleMarker([lat, lon], {
+                radius: 5,
+                color: '#3b82f6',
+                fillColor: '#3b82f6',
+                fillOpacity: 1
+            }).addTo(map);
+            m.bindTooltip(`WP ${missionWaypoints.length}`, { permanent: true, className: 'tactical-tooltip' });
+            missionMarkers.push(m);
+
+            // Update polyline
+            missionPolyline.setLatLngs(missionWaypoints);
+
+            document.getElementById('wp-count').innerText = missionWaypoints.length;
+            addLog(`Waypoint Added: ${lat.toFixed(6)}, ${lon.toFixed(6)}`);
+        }
+
+        function addManualWP() {
+            const lat = parseFloat(document.getElementById('manual-lat').value);
+            const lon = parseFloat(document.getElementById('manual-lon').value);
+
+            if (isNaN(lat) || isNaN(lon)) {
+                addLog('ERROR: Invalid coordinates!');
+                return;
+            }
+
+            // Re-use logic from map click
+            onMapClick({ latlng: { lat, lon } });
+
+            // Clear inputs
+            document.getElementById('manual-lat').value = '';
+            document.getElementById('manual-lon').value = '';
+        }
+
+        function toggleMissionMode() {
+            missionMode = !missionMode;
+            const btn = document.getElementById('btn-mission-toggle');
+            const actions = document.getElementById('mission-actions');
+
+            if (missionMode) {
+                btn.innerText = 'MISSION PLANNER: ON';
+                btn.classList.add('bg-blue-600/50');
+                actions.classList.remove('hidden');
+                addLog('Entering Mission Planning Mode...');
+            } else {
+                btn.innerText = 'MISSION PLANNER: OFF';
+                btn.classList.remove('bg-blue-600/50');
+                actions.classList.add('hidden');
+                addLog('Exiting Mission Planning Mode.');
+            }
+        }
+
+        function clearMissionUI() {
+            missionWaypoints = [];
+            missionMarkers.forEach(m => map.removeLayer(m));
+            missionMarkers = [];
+            missionPolyline.setLatLngs([]);
+            document.getElementById('wp-count').innerText = '0';
+            addLog('Mission planning cleared locally.');
+        }
+
+        function uploadMission() {
+            if (missionWaypoints.length === 0) {
+                addLog('ERROR: No waypoints to upload!');
+                return;
+            }
+            if (socket && socket.readyState === WebSocket.OPEN) {
+                socket.send(JSON.stringify({
+                    command: 'upload_mission',
+                    waypoints: missionWaypoints
+                }));
+                addLog(`Uploading mission with ${missionWaypoints.length} points...`);
+            }
+        }
+
+        function initHUD() {
+            hudCanvas = document.getElementById('hudCanvas');
+            hudCtx = hudCanvas.getContext('2d');
+
+            // Handle resizing
+            const resize = () => {
+                hudCanvas.width = hudCanvas.clientWidth;
+                hudCanvas.height = hudCanvas.clientHeight;
+            };
+            window.addEventListener('resize', resize);
+            resize();
+
+            // Start HUD Render Loop
+            requestAnimationFrame(drawHUD);
+        }
+
+        function drawHUD() {
+            if (!hudCtx) return;
+            const w = hudCanvas.width;
+            const h = hudCanvas.height;
+            const ctx = hudCtx;
+
+            ctx.clearRect(0, 0, w, h);
+
+            const pitch_px = (telemetryData.pitch * (180 / Math.PI)) * 4;
+            const roll_rad = telemetryData.roll;
+
+            // 1. Artificial Horizon
+            ctx.save();
+            ctx.translate(w / 2, h / 2);
+            ctx.rotate(-roll_rad);
+            ctx.translate(0, pitch_px);
+
+            // Sky
+            ctx.fillStyle = '#1e3a8a'; // Deep Blue
+            ctx.fillRect(-w * 2, -h * 4, w * 4, h * 4);
+            // Ground
+            ctx.fillStyle = '#14532d'; // Dark Green
+            ctx.fillRect(-w * 2, 0, w * 4, h * 4);
+            // Horizon Line
+            ctx.strokeStyle = '#fff';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(-w * 2, 0); ctx.lineTo(w * 2, 0);
+            ctx.stroke();
+
+            // Pitch Ladder
+            ctx.fillStyle = 'white';
+            ctx.font = '10px JetBrains Mono';
+            ctx.textAlign = 'center';
+            for (let i = -90; i <= 90; i += 10) {
+                if (i === 0) continue;
+                const y = -i * 4;
+                const lineW = (i % 20 === 0) ? 40 : 20;
+                ctx.beginPath();
+                ctx.moveTo(-lineW, y); ctx.lineTo(lineW, y);
+                ctx.stroke();
+                ctx.fillText(i, -lineW - 15, y + 4);
+                ctx.fillText(i, lineW + 15, y + 4);
+            }
+            ctx.restore();
+
+            // 2. Static Overlays (Non-rotating)
+            // Center Indicator (Aircaft Symbol)
+            ctx.strokeStyle = '#facc15';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(w / 2 - 40, h / 2); ctx.lineTo(w / 2 - 10, h / 2);
+            ctx.lineTo(w / 2, h / 2 + 10); ctx.lineTo(w / 2 + 10, h / 2);
+            ctx.lineTo(w / 2 + 40, h / 2);
+            ctx.stroke();
+
+            // 3. Speed Ladder (Left)
+            ctx.fillStyle = 'rgba(0,0,0,0.5)';
+            ctx.fillRect(0, 20, 50, h - 40);
+            ctx.strokeStyle = '#4ade80';
+            ctx.strokeRect(0, 20, 50, h - 40);
+
+            ctx.save();
+            ctx.translate(0, h / 2);
+            const speed_offset = (telemetryData.groundspeed % 5) * 10;
+            ctx.beginPath();
+            for (let i = -5; i <= 5; i++) {
+                const val = Math.floor(telemetryData.groundspeed / 5) * 5 + (i * 5);
+                if (val < 0) continue;
+                const y = -i * 50 + speed_offset;
+                ctx.moveTo(40, y); ctx.lineTo(50, y);
+                ctx.fillStyle = '#4ade80';
+                ctx.font = '10px JetBrains Mono';
+                if (y > -h / 2 + 20 && y < h / 2 - 20) {
+                    ctx.fillText(val.toFixed(0), 5, y + 4);
+                }
+            }
+            ctx.stroke();
+            ctx.restore();
+            // Speed Label
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, h / 2 - 10, 55, 20);
+            ctx.strokeStyle = '#facc15';
+            ctx.strokeRect(0, h / 2 - 10, 55, 20);
+            ctx.fillStyle = '#facc15';
+            ctx.font = 'bold 12px JetBrains Mono';
+            ctx.fillText(telemetryData.groundspeed.toFixed(1), 5, h / 2 + 5);
+
+            // 4. Altitude Ladder (Right)
+            ctx.fillStyle = 'rgba(0,0,0,0.5)';
+            ctx.fillRect(w - 50, 20, 50, h - 40);
+            ctx.strokeStyle = '#4ade80';
+            ctx.strokeRect(w - 50, 20, 50, h - 40);
+
+            ctx.save();
+            ctx.translate(w, h / 2);
+            const alt_offset = (telemetryData.alt % 10) * 5;
+            ctx.beginPath();
+            for (let i = -5; i <= 5; i++) {
+                const val = Math.floor(telemetryData.alt / 10) * 10 + (i * 10);
+                const y = -i * 50 + alt_offset;
+                ctx.moveTo(-50, y); ctx.lineTo(-40, y);
+                ctx.fillStyle = '#4ade80';
+                ctx.font = '10px JetBrains Mono';
+                if (y > -h / 2 + 20 && y < h / 2 - 20) {
+                    ctx.fillText(val.toFixed(0), -35, y + 4);
+                }
+            }
+            ctx.stroke();
+            ctx.restore();
+            // Alt Label
+            ctx.fillStyle = '#000';
+            ctx.fillRect(w - 65, h / 2 - 10, 65, 20);
+            ctx.strokeStyle = '#facc15';
+            ctx.strokeRect(w - 65, h / 2 - 10, 65, 20);
+            ctx.fillStyle = '#facc15';
+            ctx.font = 'bold 12px JetBrains Mono';
+            ctx.fillText(telemetryData.alt.toFixed(1), w - 60, h / 2 + 5);
+
+            // 5. Compass Tape (Top)
+            ctx.fillStyle = 'rgba(0,0,0,0.8)';
+            ctx.fillRect(50, 0, w - 100, 25);
+            ctx.strokeStyle = '#4ade80';
+            ctx.strokeRect(50, 0, w - 100, 25);
+
+            ctx.save();
+            ctx.rect(50, 0, w - 100, 25);
+            ctx.clip();
+            ctx.translate(w / 2, 0);
+            const hdg = telemetryData.heading;
+            const hdg_offset = (hdg % 10) * 5;
+            for (let i = -10; i <= 10; i++) {
+                const val = (Math.floor(hdg / 10) * 10 + (i * 10) + 360) % 360;
+                const x = i * 50 - hdg_offset;
+                ctx.beginPath();
+                ctx.moveTo(x, 0); ctx.lineTo(x, 10);
+                ctx.stroke();
+                ctx.fillStyle = '#4ade80';
+                ctx.font = '10px JetBrains Mono';
+                let label = val;
+                if (val === 0) label = "N";
+                if (val === 90) label = "E";
+                if (val === 180) label = "S";
+                if (val === 270) label = "W";
+                ctx.fillText(label, x - 5, 20);
+            }
+            ctx.restore();
+            // Center HDG Marker
+            ctx.strokeStyle = '#facc15';
+            ctx.beginPath();
+            ctx.moveTo(w / 2, 25); ctx.lineTo(w / 2 - 5, 35); ctx.lineTo(w / 2 + 5, 35); ctx.closePath();
+            ctx.stroke();
+
+            requestAnimationFrame(drawHUD);
+        }
+
+        function connect() {
+            const ip = document.getElementById('jetson-ip').value;
+            if (socket) socket.close();
+
+            socket = new WebSocket(`ws://${ip}:8888`);
+
+            socket.onopen = () => {
+                document.getElementById('conn-status').innerText = 'CONNECTED';
+                document.getElementById('conn-status').className = 'text-green-500 font-bold animate-pulse';
+                addLog('SECURE LINK ESTABLISHED.');
+            };
+
+            socket.onclose = () => {
+                document.getElementById('conn-status').innerText = 'DISCONNECTED';
+                document.getElementById('conn-status').className = 'text-red-500 font-bold';
+                addLog('LINK LOST. RETRYING...');
+                setTimeout(connect, 2000);
+            };
+
+            socket.onmessage = (event) => {
+                const msg = jsonParse(event.data);
+                if (msg) {
+                    if (msg.type === 'telemetry') {
+                        updateUI(msg.data);
+                    } else if (msg.type === 'remote_log') {
+                        showRemoteLog(msg.data);
+                    } else if (!msg.type && msg.lat !== undefined) {
+                        // Backend support for old format just in case
+                        updateUI(msg);
+                    }
+                }
+            };
+        }
+
+        function showRemoteLog(data) {
+            addLog("--- REMOTE LOG START ---");
+            const lines = data.split('\n');
+            lines.forEach(line => {
+                if (line.trim()) addLog(`[REMOTE] ${line}`);
+            });
+            addLog("--- REMOTE LOG END ---");
+        }
+
+        function jsonParse(str) {
+            try { return JSON.parse(str); } catch (e) { return null; }
+        }
+
+        function updateUI(data) {
+            telemetryData = data;
+
+            document.getElementById('val-volt').innerText = data.voltage.toFixed(1) + 'V';
+            document.getElementById('val-mode').innerText = data.mode;
+            document.getElementById('val-arm').innerText = data.armed ? 'ARMED' : 'DISARMED';
+            document.getElementById('val-mission-state').innerText = data.mission_status || 'IDLE';
+            document.getElementById('val-head').innerText = data.heading + '°';
+            document.getElementById('val-roll').innerText = (data.roll * 180 / Math.PI).toFixed(1);
+            document.getElementById('val-pitch').innerText = (data.pitch * 180 / Math.PI).toFixed(1);
+            document.getElementById('val-yaw').innerText = (data.yaw * 180 / Math.PI).toFixed(1) + '°';
+
+            document.getElementById('val-gspeed').innerText = data.velocity.toFixed(1) + ' m/s';
+
+            // Signal Update
+            if (data.rssi !== undefined) {
+                const rssi_pct = Math.min(100, Math.max(0, (data.rssi / 254) * 100));
+                const remrssi_pct = Math.min(100, Math.max(0, (data.remrssi / 254) * 100));
+
+                document.getElementById('txt-rssi').innerText = data.rssi;
+                document.getElementById('bar-rssi').style.width = rssi_pct + '%';
+
+                document.getElementById('txt-remrssi').innerText = data.remrssi;
+                document.getElementById('bar-remrssi').style.width = remrssi_pct + '%';
+            }
+
+            // Map & Marker
+            if (data.lat !== 0 && data.lon !== 0) {
+                const pos = [data.lat, data.lon];
+                marker.setLatLng(pos);
+                path.addLatLng(pos);
+                if (path.getLatLngs().length === 1) map.setView(pos, 18);
+
+                document.getElementById('map-alt').innerText = data.alt.toFixed(1) + 'm';
+            }
+
+            // Health Monitor
+            const statusEl = document.getElementById('val-status');
+            if (data.voltage < 10.5 || (data.rssi !== undefined && data.rssi < 50)) {
+                statusEl.innerText = 'WARNING';
+                statusEl.className = 'text-red-500 font-bold animate-pulse';
+            } else {
+                statusEl.innerText = 'NOMINAL';
+                statusEl.className = 'text-green-400';
+            }
+        }
+
+        function sendCommand(cmd, val) {
+            if (socket && socket.readyState === WebSocket.OPEN) {
+                socket.send(JSON.stringify({ command: cmd, value: val }));
+                addLog(`CMD SENT: ${cmd.toUpperCase()} -> ${val}`);
+            }
+        }
+
+        function addLog(msg) {
+            const log = document.getElementById('log');
+            const time = new Date().toLocaleTimeString();
+            const p = document.createElement('p');
+            p.innerHTML = `<span class="text-green-900">[${time}]</span> ${msg}`;
+            log.prepend(p);
+        }
+
+        initMap();
+        initHUD();
+        connect();
+    </script>
+</body>
+
+</html>
